@@ -1,16 +1,17 @@
 # Contributing
 
-Useful contributions to this repository:
+Useful contributions:
 
-1. A prompt recipe that reliably produces a usable asset (prompt + output + `version` + aspect ratio).
-2. A correction to the pricing or limit notes, with the source page and the date you checked it.
-3. A client example in another language that keeps the same submit → poll → download lifecycle.
+1. A routing pattern (fallback chain, modality router, cost guard) with the failure mode it prevents.
+2. A client example for another SDK or language that keeps the same request envelope.
+3. Corrections to the catalog: a missing model, a wrong billing unit, or a wrong headline price — include the model id and the source you checked.
 
 Before opening a pull request:
 
 ```bash
-python3 tools/check_links.py          # attribution links and prompt data
+python tools/catalog.py --from-file your_saved_pricing_page.html   # refresh data/models.json, CATALOG.md, README tables
+python tools/check_links.py
+python examples/router.py --task image --model gpt-image-2.5-ext --count 10
 ```
 
-Rules: keep every APIMart link attributed through its `go.apimart.ai` short link, never commit API keys, and do not
-paste outputs that contain third-party trademarks you have no right to publish.
+Every APIMart link must be an attributed `go.apimart.ai` short link minted through the promo link API; hand-made tracking parameters fail CI.

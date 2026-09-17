@@ -1,263 +1,195 @@
-# AI API Aggregator Notes — image2.5 Alongside 60+ Models
+# AI API Aggregator — One Key, One Base URL, 300+ Models
 
-What changes when one key reaches an **AI API aggregator** instead of a single vendor: shared auth, one task model for text and image jobs, provider failover, and cost accounting that stays per task.
+An **AI API aggregator** concentrates access: one credential, one base URL, one billing surface, many models.
+This repository is the working companion to that idea — a machine-readable model catalog, the request shapes for each
+modality behind the same key, and the routing patterns that keep a pipeline from double-charging or silently failing over.
 
-**Attributed entry points:** [Open GPT Image 2.5 on APIMart](https://go.apimart.ai/k-cbecf8) · [Current pricing](https://go.apimart.ai/k-d9c79c) · [Get an API key](https://go.apimart.ai/k-c7b0ff)
+<!-- snapshot:date -->2026-09-17<!-- /snapshot:date -->
 
-## Contents
+**Attributed entry points:** [Browse the model catalog](https://go.apimart.ai/k-e73309) · [Current pricing](https://go.apimart.ai/k-07eb41) · [Get an API key](https://go.apimart.ai/k-eca2fa)
 
-- [Model routes and IDs](#model-routes-and-ids)
-- [Observed pricing](#observed-pricing)
-- [What the output looks like](#what-the-output-looks-like)
-- [Quickstart](#quickstart)
-- [Request and response reference](#request-and-response-reference)
-- [Where image2.5 sits in a multi-model pipeline](#where-image25-sits-in-a-multi-model-pipeline)
-- [Failover rules that do not double-charge](#failover-rules-that-do-not-double-charge)
-- [FAQ](#faq)
-- [Attributed links](#attributed-links-how-this-repository-is-measured)
-- [Repository map](#repository-map)
+## What is in here
 
-## The aggregator trade-off, stated plainly
+| File | Why it exists |
+| --- | --- |
+| [`data/models.json`](data/models.json) | the full catalog: model id, display name, alias, modality, billing unit, prices |
+| [`CATALOG.md`](CATALOG.md) | the same catalog as a readable table, regenerated in CI |
+| [`tools/catalog.py`](tools/catalog.py) | builds the catalog from the public pricing payload — no API key needed |
+| [`examples/router.py`](examples/router.py) | routes a task to a model, prints the cost arithmetic, retries safely |
+| [`examples/openai_sdk_client.py`](examples/openai_sdk_client.py) | the OpenAI SDK pointed at the aggregator base URL |
+| [`examples/curl.sh`](examples/curl.sh) | chat, image and async task polling with plain curl |
 
-An aggregator concentrates access: one base URL, one key, one billing surface, many models. You pay for that
-convenience with provider-specific behaviour leaking through the abstraction.
+## Catalog coverage
 
-What holds up in practice:
+<!-- catalog:summary:start -->
+| Modality | Models captured | Typical billing unit |
+| --- | --- | --- |
+| Image | 41 | per delivered image (by resolution) |
+| Video | 48 | per second of output (by resolution) |
+| Text / multimodal | 208 | per million tokens (input / cached / output) |
+| Other (per call, per track) | 6 | fixed unit per call |
+<!-- catalog:summary:end -->
 
-- **Shared auth and endpoints.** Text and image jobs both accept `Authorization: Bearer` against `https://api.apimart.ai/v1`.
-- **One async contract.** A submitted job returns a task ID; polling looks the same whether the payload was a chat completion or an image2.5 render.
-- **Catalog-level routing.** Swapping `gpt-image-2.5-ext` for another image model is a string change, which makes quality comparisons cheap.
+The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the ones most requests land on.
 
-What leaks through:
+### Image routes
 
-- **Parameter unions.** Each model accepts a slightly different subset (`quality` on the official route, `version` on the relayed one). Validate per model, not per gateway.
-- **Price models differ.** Flat per-image routes sit next to token-billed endpoints, so budget reporting has to be per task, not per request.
+<!-- catalog:image:start -->
+| Model id | Route | Headline price | Billing unit |
+| --- | --- | --- | --- |
+| `gpt-image-2.5-ext` | image2.5 per-image route | $0.0085 | usd_per_image |
+| `gemini-3-pro-image-preview` | Nano Banana Pro | $0.03 | usd_per_image |
+| `gemini-3.1-flash-image-preview` | Nano Banana 2 | $0.015 | usd_per_image |
+| `gemini-2.5-flash-image-preview` | Nano Banana | $0.0125 | usd_per_image |
+| `grok-imagine-1.5-apimart` | Grok Image 1.5 | $0.015 | usd_per_image |
+| `seedream-4-5` | Seedance 4.5 image route | $0.026 | usd_per_image |
+<!-- catalog:image:end -->
 
-## Model routes and IDs
+### Video routes
 
-| Route | `model` value | Selector | Billing style | Best for |
-| --- | --- | --- | --- | --- |
-| Official (token) | `gpt-image-2.5-flare` | n/a | token usage, `quality` low → max | everyday generation, batch drafts |
-| Official (token) | `gpt-image-2.5-sunburst` | n/a | token usage, `quality` low → max | editing precision, production assets |
-| Relayed (per image) | `gpt-image-2.5-ext` | `version: "flare"` | per delivered image (`n` ≤ 4) | high-volume generation at a flat price |
-| Relayed (per image) | `gpt-image-2.5-ext` | `version: "sunburst"` | per delivered image (`n` ≤ 4) | edits and reference-driven work at a flat price |
+<!-- catalog:video:start -->
+| Model id | Route | Headline price | Billing unit |
+| --- | --- | --- | --- |
+| `seedance-2.5` | Seedance 2.5 | $0.216 | usd_per_second |
+| `seedance-2.0` | Seedance 2.0 | $0.142 | usd_per_second |
+| `seedance-2.0-mini` | Seedance 2.0 mini | $0.0229 | usd_per_second |
+| `kling-3.0-turbo` | Kling 3.0 Turbo | $0.1144 | usd_per_second |
+<!-- catalog:video:end -->
 
-Both relayed variants accept `resolution` `1K` / `2K` / `4K`, ten aspect ratios plus `auto`, and up to 16 reference images in `image_urls`. The official route adds exact pixel dimensions and the `low / medium / high / xhigh / max` quality ladder.
+### Text and multimodal routes
 
-- Family: **GPT Image 2.5** — the OpenAI image generation and editing series served through APIMart
-- Model IDs: `gpt-image-2.5-flare`, `gpt-image-2.5-sunburst` (official route); `gpt-image-2.5-ext` with `version: flare|sunburst` (per-image relay route)
-- Base URL: `https://api.apimart.ai/v1` — OpenAI-compatible `POST /v1/images/generations`
-- Async tasks: submit, then poll `GET /v1/tasks/{task_id}` until `status: completed`
-- Output tiers: `1K`, `2K`, `4K`; up to 16 reference images for image-to-image; `n` ≤ 4
-- Observed 1K price on the relayed route: **$0.0085 per delivered image** (checked 2026-09-16)
+<!-- catalog:token:start -->
+| Model id | Route | Headline price | Billing unit |
+| --- | --- | --- | --- |
+| `gpt-5.5` | GPT-5.5 | $4.00 | usd_per_million_tokens |
+| `gpt-5.5-pro` | GPT-5.5 Pro | $24.00 | usd_per_million_tokens |
+| `claude-opus-5` | Claude Opus 5 | $4.00 | usd_per_million_tokens |
+| `claude-sonnet-4-6` | Claude Sonnet 4.6 | $2.40 | usd_per_million_tokens |
+| `deepseek-v4-pro` | DeepSeek V4 Pro | $1.03 | usd_per_million_tokens |
+| `deepseek-v4-flash` | DeepSeek V4 Flash | $0.3429 | usd_per_million_tokens |
+| `gpt-5-mini` | GPT-5 mini | $0.2 | usd_per_million_tokens |
+<!-- catalog:token:end -->
 
-## Observed pricing
+## One key, several request shapes
 
-| version | 1K | 2K | 4K | billing unit |
-| --- | --- | --- | --- | --- |
-| `flare` | $0.0085 | $0.014 | $0.021 | per delivered image |
-| `sunburst` | $0.0085 | $0.014 | check live pricing | per delivered image |
-
-Per-image billing on the relayed route is charged for delivered images, and the task response reports the exact amount in `cost` / `credits_cost`, so the table above can be re-verified after a single paid call. The official `gpt-image-2.5-flare` / `gpt-image-2.5-sunburst` route is token-billed with a `low → medium → high → xhigh → max` quality ladder, which is why this repository keeps both the flat per-image expectation and the token-billed option side by side. Snapshot date: 2026-09-16.
-
-## What the output looks like
-
-Every render below came from a single `POST /v1/images/generations` call on the relayed route, at the aspect ratio shown.
-| Output | Recipe | Use case | Version | Ratio | Prompt |
-| --- | --- | --- | --- | --- | --- |
-| <img src="assets/02-rainy-tokyo-alley.jpg" width="220" alt="Cinematic night street generated with GPT Image 2.5"> | Cinematic night street | Cinematic still | `flare` | 16:9 | `Rain-slicked Tokyo alley at night, neon sign reflections on wet asphalt, a lone cyclist with an umbrella, cinematic 35mm film still, shallow depth of field` |
-| <img src="assets/05-ivory-trench-portrait.jpg" width="220" alt="Fashion editorial portrait generated with GPT Image 2.5"> | Fashion editorial portrait | Fashion | `flare` | 3:4 | `Fashion editorial portrait of a model wearing an oversized ivory trench coat, seamless light grey studio backdrop, crisp high key lighting, medium format detail` |
-| <img src="assets/08-api-latency-dashboard-panel.jpg" width="220" alt="Flat vector dashboard panel generated with GPT Image 2.5"> | Flat vector dashboard panel | Design / infographic | `sunburst` | 16:9 | `Flat vector dashboard panel with three gauge dials, abstract latency curves and clean geometric cards, muted blue and sand palette, generous white space, crisp vector edges` |
-| <img src="assets/12-paper-cut-mountain-lake.jpg" width="220" alt="Layered paper-cut illustration generated with GPT Image 2.5"> | Layered paper-cut illustration | Editorial illustration | `sunburst` | 4:3 | `Layered paper cut illustration of a mountain lake sunrise, five depth layers, soft pastel palette, subtle drop shadows, art print composition` |
-| <img src="assets/11-floating-ruin-keyart.jpg" width="220" alt="Game key art generated with GPT Image 2.5"> | Game key art | Game concept art | `sunburst` | 16:9 | `Fantasy game key art, an armored knight standing on a floating stone ruin above a sea of clouds, dramatic backlight, painterly detail, wide cinematic composition` |
-| <img src="assets/03-ramen-flatlay.jpg" width="220" alt="Menu food photography generated with GPT Image 2.5"> | Menu food photography | Food photography | `flare` | 4:3 | `Overhead flat lay of a spicy ramen bowl with a soft boiled egg, chopsticks resting on the rim, dark slate table, natural side light, editorial food photography` |
-
-Every recipe ships with the exact JSON body in [`examples/`](examples).
-
-## Quickstart
-
-The relayed route is asynchronous: submit, then poll the task ID.
-
-```bash
-# text to image on the per-image route
-IDEMPOTENCY_KEY="$(uuidgen)"
-curl --request POST \
-  --url https://api.apimart.ai/v1/images/generations \
-  --header "Authorization: Bearer $APIMART_API_KEY" \
-  --header 'Content-Type: application/json' \
-  --header 'X-APIMart-Response-Version: 2026-07-27' \
-  --header "Idempotency-Key: $IDEMPOTENCY_KEY" \
-  --data '{
-    "model": "gpt-image-2.5-ext",
-    "version": "flare",
-    "prompt": "A cozy reading nook beside a window on a rainy day, warm table lamp, cinematic lighting",
-    "size": "1:1",
-    "resolution": "1K",
-    "n": 1
-  }'
-```
+An aggregator is only useful if the same credential works across modalities. All three shapes below use
+`Authorization: Bearer $APIMART_API_KEY` against `https://api.apimart.ai/v1`.
 
 ```python
-import os, time, uuid, requests
+from openai import OpenAI
 
-BASE = "https://api.apimart.ai/v1"
-HEADERS = {
-    "Authorization": f"Bearer {os.environ['APIMART_API_KEY']}",
-    "Content-Type": "application/json",
-    "X-APIMart-Response-Version": "2026-07-27",
-    "Idempotency-Key": str(uuid.uuid4()),   # reuse on retry, not on a new image
-}
-
-def generate(prompt: str, version: str = "flare", resolution: str = "1K", size: str = "1:1") -> str:
-    r = requests.post(f"{BASE}/images/generations", headers=HEADERS, timeout=60, json={
-        "model": "gpt-image-2.5-ext", "version": version, "prompt": prompt,
-        "size": size, "resolution": resolution, "n": 1,
-    })
-    r.raise_for_status()
-    task_id = r.json()["data"]["id"]
-    while True:
-        t = requests.get(f"{BASE}/tasks/{task_id}", headers=HEADERS, timeout=60).json()["data"]
-        if t["status"] in ("completed", "failed"):
-            return t
-        time.sleep(5)
+client = OpenAI(base_url="https://api.apimart.ai/v1", api_key=os.environ["APIMART_API_KEY"])
+chat = client.chat.completions.create(model="gpt-5.5", messages=[{"role": "user", "content": "Explain idempotency keys"}])
 ```
-
-```javascript
-const headers = {
-  Authorization: `Bearer ${process.env.APIMART_API_KEY}`,
-  "Content-Type": "application/json",
-  "X-APIMart-Response-Version": "2026-07-27",
-  "Idempotency-Key": crypto.randomUUID(),
-};
-const res = await fetch("https://api.apimart.ai/v1/images/generations", {
-  method: "POST",
-  headers,
-  body: JSON.stringify({
-    model: "gpt-image-2.5-ext", version: "flare", prompt: "A sky garden at dawn, architectural photography",
-    size: "16:9", resolution: "1K", n: 1,
-  }),
-});
-const { data } = await res.json();          // data.id === task id
-// poll GET https://api.apimart.ai/v1/tasks/${data.id} until data.status === "completed"
-```
-
-Official (token-billed) route, for comparison — same path, no `version`, quality ladder instead:
 
 ```bash
-curl --request POST --url https://api.apimart.ai/v1/images/generations \
-  --header "Authorization: Bearer $APIMART_API_KEY" --header 'Content-Type: application/json' \
-  --data '{"model":"gpt-image-2.5-sunburst","prompt":"Preserve the product label, replace the background with soft off-white, add a natural cast shadow","size":"1:1","resolution":"1k","quality":"high","n":1}'
+# image route: submit, then poll the task until completed
+curl -sS https://api.apimart.ai/v1/images/generations \
+  -H "Authorization: Bearer $APIMART_API_KEY" -H 'Content-Type: application/json' \
+  -H "Idempotency-Key: $(uuidgen)" \
+  -d '{"model":"gpt-image-2.5-ext","version":"flare","prompt":"A pasta dish on a slate table, side light","size":"1:1","resolution":"1K","n":1}'
 ```
 
-Full field reference: [official route docs](https://docs.apimart.ai/en/api-reference/images/gpt-image-2.5/generation) and [ext route docs](https://docs.apimart.ai/en/api-reference/images/gpt-image-2.5-ext/generation). Get a key at [apimart.ai/keys](https://go.apimart.ai/k-c7b0ff).
+```bash
+# task polling returns status, progress, cost and the result URLs
+curl -sS https://api.apimart.ai/v1/tasks/task_01EXAMPLE -H "Authorization: Bearer $APIMART_API_KEY"
+```
 
-## Request and response reference (ext route)
+Video routes follow the same envelope with a per-second unit, so a 10-second clip is `rate × 10` on the resolution tier
+you asked for.
 
-| Field | Type | Default | Notes |
-| --- | --- | --- | --- |
-| `model` | string | required | `gpt-image-2.5-ext` |
-| `version` | string | `flare` | `flare` or `sunburst` |
-| `prompt` | string | required | must not be empty after trimming |
-| `resolution` | string | `1K` | `1K`, `2K`, `4K` |
-| `size` | string | `auto` | `auto` or 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3, 5:4, 4:5, 21:9 |
-| `n` | integer | `1` | 1–4 per request on the relayed route |
-| `image_urls` | string[] | — | up to 16 references, URL or data URL, no extra charge |
+## Routing patterns that hold up in production
 
-Submission returns `202` with `data.id` (the task ID) and `data.poll_url`; `GET /v1/tasks/{task_id}` then reports
-`status` (`pending` → `processing` → `completed` / `failed`), `progress`, `cost`, `credits_cost` and, when finished,
-`result.images[].url` with an `expires_at` timestamp. Download outputs before that timestamp — the URLs are temporary.
+1. **Route by modality, not by brand.** Pick the image route from the image table, the video route from the per-second
+   table, and the text route from the token table; comparing them on one axis (price per artefact) avoids nonsense
+   comparisons.
+2. **Retry with an idempotency key.** `429` and `5xx` are retryable, `400` / `401` / `402` are not; reusing the same
+   `Idempotency-Key` collapses a retry into the original task instead of buying a second image.
+3. **Poll with backoff, stop on terminal states.** `pending → processing → completed | failed`; schedule the first
+   polls a few seconds apart and widen from there.
+4. **Log cost per task, not per request.** The task response carries `cost` and `credits_cost`; summing those is the only
+   reconciliation that matches the invoice.
+5. **Keep a fallback chain per modality.** Same-modality fallback is usually safe; cross-modality fallback is not
+   (an edit prompt rarely survives a different vendor's model).
 
-## Where image2.5 sits in a multi-model pipeline
+## Aggregator or direct vendor?
 
-| Stage | Text models | Image stage |
+| Question | Aggregator | Direct vendor |
 | --- | --- | --- |
-| Brief expansion | chat completions | — |
-| Prompt hardening | chat completions with JSON output | — |
-| Asset generation | — | `gpt-image-2.5-ext` (`flare` for volume, `sunburst` for edits) |
-| QA / description | vision-capable chat model | — |
-| Cost roll-up | per-task `cost` field on every job | per-task `cost` field on every job |
+| Credentials to manage | one key | one per vendor |
+| Response envelopes | normalised, with a task model for long jobs | vendor-specific |
+| Model choice | swap a string | new integration per vendor |
+| Pricing model | mixed units (per image, per second, per token) under one bill | vendor-specific billing |
+| Failure modes | one hop to debug, provider quirks can leak through | fewer layers, fewer abstractions |
+| Best fit | teams that ship several modalities and want one budget line | single-model products with deep vendor-specific needs |
 
-## Failover rules that do not double-charge
+## Estimate before you spend
 
-1. Classify the error first: `400` / `401` / `402` are terminal, `429` and `5xx` are retryable.
-2. Retry with the same `Idempotency-Key` so a flapping upstream cannot invoice the same image twice.
-3. Only cross-model fallback when the prompt is model-agnostic; a `sunburst` edit brief usually is not portable to another vendor.
-4. Record the model ID and version next to every stored asset, or you cannot rebuild it later.
-
-
-
+```bash
+python examples/router.py image --model gpt-image-2.5-ext --count 250
+python examples/router.py video --model seedance-2.0-mini --resolution 480P --seconds 8 --count 25
+python examples/router.py text  --model claude-opus-5 --input-tokens 400000 --output-tokens 60000
+python examples/router.py list --spec image | head
+```
 
 ## FAQ
 
-**What is an AI API aggregator?**
+**What counts as an AI API aggregator?**
+A single gateway that resells access to many models behind one key, one base URL and one bill. It usually normalises the
+request envelope, adds a task model for long-running jobs, and hides provider-specific endpoints.
 
-A single gateway that resells access to many models behind one key, one base URL and one billing account. Aggregators usually normalise the request shape but cannot fully normalise model-specific parameters or pricing models.
+**Does aggregating change the models' output?**
+Generation happens upstream, so quality comes from the model. What changes is the parameter surface (each model accepts a
+slightly different subset), the safety layer, and the response envelope — pin the response version header and verify one
+paid request per model.
 
-**Can one key really cover both text and image2.5 calls?**
+**How do I stop a retry from billing twice?**
+Send `Idempotency-Key` on submit and reuse the identical body when retrying. Without it, a timeout plus a retry is two
+generations, not one.
 
-Yes on APIMart: chat completions and `POST /v1/images/generations` share the same bearer key and task model, which is what makes a single pipeline possible.
-
-**How do I compare an aggregator against direct vendor access?**
-
-Run the same prompt set through both, record latency, per-task cost and rejection rate, then compare cost per *accepted* asset — the number that actually matters.
-
-**Does aggregation weaken output quality?**
-
-The model behaviour is upstream; the risks are parameter drift, a different safety layer and response-shape changes. Pin the response version header and verify one paid request per model before scaling.
+**Which modality should I benchmark first?**
+Whichever dominates the bill. In practice image and video batches dominate flat-rate spend, while text workloads dominate
+volume — the catalog lists the billing unit for every route so you can sort by the unit you actually pay in.
 
 ## Related searches
 
-- `image2.5 api`
-- `image 2.5 api`
-- `image2.5 api gateway`
-- `image2-5 api`
-- `gpt-image-2.5 api`
-- `image2.5 api pricing`
-- `ai api relay`
-- `ai api gateway`
 - `ai api aggregator`
-- `apimart image2.5`
-- `image2.5 api documentation`
-- `openai compatible image api`
-- `apimart`
-- `image2 5`
-- `image 2 5`
-- `model catalog`
+- `unified ai api`
+- `ai api gateway`
+- `one api key many models`
+- `openai compatible api`
+- `ai api pricing comparison`
+- `llm api comparison`
 
 ## Attributed links (how this repository is measured)
 
-Every outbound link in this repository points at APIMart through a short link, so visits coming from this page are attributed instead of arriving as anonymous traffic.
-
 | Purpose | Attributed link | Target |
 | --- | --- | --- |
-| Open GPT Image 2.5 on APIMart | <https://go.apimart.ai/k-cbecf8> | `apimart.ai/model/gpt-image-2-5` |
-| Current APIMart pricing | <https://go.apimart.ai/k-d9c79c> | `apimart.ai/pricing` |
-| Get an API key on APIMart | <https://go.apimart.ai/k-c7b0ff> | `apimart.ai/keys` |
+| Browse the model catalog | <https://go.apimart.ai/k-e73309> | `apimart.ai/model` |
+| Current pricing page | <https://go.apimart.ai/k-07eb41> | `apimart.ai/pricing` |
+| Get an API key | <https://go.apimart.ai/k-eca2fa> | `apimart.ai/keys` |
 
-- [ ] Attribution target: the three `go.apimart.ai` short links above, all minted through the promo link API (302 with `utm_source=kol_sponsor&utm_medium=sponsor&sclid=...`). The endpoint docs on `docs.apimart.ai` are referenced as plain links: the link service only accepts the `apimart.ai` main domain, so no attributed short link exists for them.
-- [ ] Re-check the price on the pricing page before a production run: promotional routing can change.
+Outbound APIMart links are minted through the promo link API so traffic from this repository is attributed; hand-made
+tracking parameters are rejected by `tools/check_links.py` in CI.
 
 ## Disclosure
 
-APIMart is the service described in this repository; this page is published to document it, not to claim official status. The `ext` route is a third-party relay endpoint billed per delivered image, while the `gpt-image-2.5-flare` / `gpt-image-2.5-sunburst` models are the token-billed route. Model names, prices and limits belong to their respective owners, and everything here is observation-dated (2026-09-16). Verify with a single paid request before scaling volume.
-
+APIMart is the aggregator documented here; this repository is published to document it, not to claim official status.
+Model names, prices and documentation belong to their respective owners, and relayed `ext` routes are third-party relay
+endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-17<!-- /snapshot:date -->.
 
 ## Repository map
 
 ```text
-ai-api-aggregator-image2.5/
-  PROMPTS.md           every recipe with its output
-  README.md            overview, pricing, quickstart and FAQ
-  examples/
-    curl.sh            submit + poll with curl
-    python_generate.py end-to-end Python client
-    javascript.mjs     Node 18+ equivalent
-  tools/check_links.py attribution + prompt-data validator
-  .github/workflows/validate.yml  CI for the validator
-  assets/              example renders (JPEG, resized for the README)
-  LICENSE              MIT
+README.md      aggregator overview, catalog summary, routing patterns, FAQ
+CATALOG.md     full model catalog (regenerated by CI)
+data/models.json  machine-readable catalog
+tools/catalog.py  builds the catalog from the public pricing payload
+tools/check_links.py  attribution + data guard
+examples/      router, OpenAI SDK client, curl recipes
+.github/workflows/  daily catalog refresh + validation
 ```
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Model names and vendor documentation remain the property of their owners.
+MIT — see [LICENSE](LICENSE).
