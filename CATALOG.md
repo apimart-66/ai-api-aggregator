@@ -1,6 +1,6 @@
 # Unified model catalog
 
-303 models captured from `https://apimart.ai/en/pricing` on 2026-09-17T07:53:32Z.
+305 models captured from `https://apimart.ai/en/pricing` on 2026-09-18T06:35:23Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -38,14 +38,15 @@
 | `qwen-image-2.0-pro` | qwen-image-2.0-pro | — | image | usd_per_image | $0.05 |
 | `qwen-image-3.0` | qwen-image-3.0 | — | image | usd_per_image | $0.0206 |
 | `qwen-image-3.0-pro` | qwen-image-3.0-pro | — | image | usd_per_image | $0.0286 |
-| `seedream-4-0` | seedance-4-0 | — | image | usd_per_image | $0.0195 |
-| `seedream-4-5` | seedance-4-5 | — | image | usd_per_image | $0.026 |
+| `seedream-4-0` | seedream-4-0 | — | image | usd_per_image | $0.0195 |
+| `seedream-4-5` | seedream-4-5 | — | image | usd_per_image | $0.026 |
 | `seedream-5-0-lite` | seedream-5-0-lite | — | image | usd_per_image | $0.028 |
 | `seedream-5-0-pro` | seedream-5-0-pro | — | image | usd_per_image | $0.036 |
 | `wan2.7-image` | wan2.7-image | — | image | usd_per_image | $0.0216 |
 | `wan2.7-image-pro` | wan2.7-image-pro | — | image | usd_per_image | $0.0544 |
 | `z-image-turbo` | z-image-turbo | — | image | usd_per_image | $0.01 |
 | `MiniMax-H3` | MiniMax-H3 | — | second | usd_per_second | $0.0914 |
+| `MiniMax-H3-Max` | MiniMax-H3-Max | — | second | usd_per_second | $0.0571 |
 | `MiniMax-H3-Regeneration` | MiniMax-H3-Regeneration | — | second | usd_per_second | $0.0343 |
 | `MiniMax-Hailuo-02` | MiniMax-Hailuo-02 | — | second | usd_per_second | $0.08 |
 | `MiniMax-Hailuo-2.3` | MiniMax-Hailuo-2.3 | — | second | usd_per_second | $0.0488 |
@@ -131,6 +132,7 @@
 | `deepseek-v3.2-exp` | deepseek-v3.2-exp | — | token | usd_per_million_tokens | $0.2056 |
 | `deepseek-v4-flash` | deepseek-v4-flash | — | token | usd_per_million_tokens | $0.3429 |
 | `deepseek-v4-pro` | deepseek-v4-pro | — | token | usd_per_million_tokens | $1.03 |
+| `deepseek-v4.1-flash` | deepseek-v4.1-flash | — | token | usd_per_million_tokens | $0.2286 |
 | `gemini-2.5-flash` | gemini-2.5-flash | — | token | usd_per_million_tokens | $0.24 |
 | `gemini-2.5-flash-lite` | gemini-2.5-flash-lite | — | token | usd_per_million_tokens | $0.08 |
 | `gemini-2.5-flash-nothinking` | gemini-2.5-flash-nothinking | — | token | usd_per_million_tokens | $0.24 |

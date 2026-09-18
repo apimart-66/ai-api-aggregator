@@ -4,7 +4,7 @@ An **AI API aggregator** concentrates access: one credential, one base URL, one 
 This repository is the working companion to that idea — a machine-readable model catalog, the request shapes for each
 modality behind the same key, and the routing patterns that keep a pipeline from double-charging or silently failing over.
 
-<!-- snapshot:date -->2026-09-17<!-- /snapshot:date -->
+<!-- snapshot:date -->2026-09-18<!-- /snapshot:date -->
 
 **Attributed entry points:** [Browse the model catalog](https://go.apimart.ai/k-e73309) · [Current pricing](https://go.apimart.ai/k-07eb41) · [Get an API key](https://go.apimart.ai/k-eca2fa)
 
@@ -25,8 +25,8 @@ modality behind the same key, and the routing patterns that keep a pipeline from
 | Modality | Models captured | Typical billing unit |
 | --- | --- | --- |
 | Image | 41 | per delivered image (by resolution) |
-| Video | 48 | per second of output (by resolution) |
-| Text / multimodal | 208 | per million tokens (input / cached / output) |
+| Video | 49 | per second of output (by resolution) |
+| Text / multimodal | 209 | per million tokens (input / cached / output) |
 | Other (per call, per track) | 6 | fixed unit per call |
 <!-- catalog:summary:end -->
 
@@ -176,7 +176,7 @@ tracking parameters are rejected by `tools/check_links.py` in CI.
 
 APIMart is the aggregator documented here; this repository is published to document it, not to claim official status.
 Model names, prices and documentation belong to their respective owners, and relayed `ext` routes are third-party relay
-endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-17<!-- /snapshot:date -->.
+endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-18<!-- /snapshot:date -->.
 
 ## Repository map
 
