@@ -1,10 +1,9 @@
 # Unified model catalog
 
-305 models captured from `https://apimart.ai/en/pricing` on 2026-09-20T06:34:04Z.
+282 models captured from `https://apimart.ai/en/pricing` on 2026-09-21T06:38:39Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
-| `dall-e-2` | dall-e-2 | — | image | usd_per_image | $0.016 |
 | `dall-e-3` | DALL-E 3 | — | image | usd_per_image | $0.032 |
 | `flux-2-flex` | flux-2 | — | image | usd_per_image | — |
 | `flux-2-max` | flux-2-max | — | image | usd_per_image | $0.08 |
@@ -119,8 +118,6 @@
 | `claude-sonnet-4-6` | claude-sonnet-4-6 | — | token | usd_per_million_tokens | $2.40 |
 | `claude-sonnet-4-6-thinking` | claude-sonnet-4-6-thinking | — | token | usd_per_million_tokens | $2.40 |
 | `claude-sonnet-5` | claude-sonnet-5 | — | token | usd_per_million_tokens | $1.60 |
-| `computer-use-preview` | computer-use-preview | — | token | usd_per_million_tokens | $2.40 |
-| `computer-use-preview-2025-03-11` | computer-use-preview-2025-03-11 | — | token | usd_per_million_tokens | $2.40 |
 | `davinci-002` | davinci-002 | — | token | usd_per_million_tokens | $1.60 |
 | `deepseek-ocr` | deepseek-ocr | — | token | usd_per_million_tokens | $0.0456 |
 | `deepseek-r1` | deepseek-r1 | — | token | usd_per_million_tokens | $0.448 |
@@ -169,16 +166,10 @@
 | `gpt-3.5-turbo-16k` | gpt-3.5-turbo-16k | — | token | usd_per_million_tokens | $2.40 |
 | `gpt-3.5-turbo-16k-0613` | gpt-3.5-turbo-16k-0613 | — | token | usd_per_million_tokens | $2.40 |
 | `gpt-3.5-turbo-instruct` | gpt-3.5-turbo-instruct | — | token | usd_per_million_tokens | $1.20 |
-| `gpt-3.5-turbo-instruct-0914` | gpt-3.5-turbo-instruct-0914 | — | token | usd_per_million_tokens | $1.20 |
-| `gpt-4` | GPT-4 | — | token | usd_per_million_tokens | $24.00 |
 | `gpt-4-0125-preview` | gpt-4-0125-preview | — | token | usd_per_million_tokens | $8.00 |
-| `gpt-4-0613` | gpt-4-0613 | — | token | usd_per_million_tokens | $24.00 |
 | `gpt-4-1106-preview` | gpt-4-1106-preview | — | token | usd_per_million_tokens | $8.00 |
 | `gpt-4-32k` | gpt-4-32k | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-4-32k-0613` | gpt-4-32k-0613 | — | token | usd_per_million_tokens | $2.00 |
-| `gpt-4-turbo` | gpt-4-turbo | — | token | usd_per_million_tokens | $8.00 |
-| `gpt-4-turbo-2024-04-09` | gpt-4-turbo-2024-04-09 | — | token | usd_per_million_tokens | $8.00 |
-| `gpt-4-turbo-preview` | gpt-4-turbo-preview | — | token | usd_per_million_tokens | $8.00 |
 | `gpt-4-vision-preview` | gpt-4-vision-preview | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-4.1` | gpt-4.1 | — | token | usd_per_million_tokens | $1.60 |
 | `gpt-4.1-2025-04-14` | gpt-4.1-2025-04-14 | — | token | usd_per_million_tokens | $1.60 |
@@ -190,23 +181,15 @@
 | `gpt-4.5-preview-2025-02-27` | gpt-4.5-preview-2025-02-27 | — | token | usd_per_million_tokens | $60.00 |
 | `gpt-4o` | GPT-4o | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-4o-2024-05-13` | gpt-4o-2024-05-13 | — | token | usd_per_million_tokens | $4.00 |
-| `gpt-4o-2024-08-06` | gpt-4o-2024-08-06 | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-4o-2024-11-20` | gpt-4o-2024-11-20 | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-4o-mini` | GPT-4o Mini | — | token | usd_per_million_tokens | $0.12 |
-| `gpt-4o-mini-2024-07-18` | gpt-4o-mini-2024-07-18 | — | token | usd_per_million_tokens | $0.12 |
 | `gpt-4o-mini-realtime-preview` | gpt-4o-mini-realtime-preview | — | token | usd_per_million_tokens | $0.48 |
 | `gpt-4o-mini-realtime-preview-2024-12-17` | gpt-4o-mini-realtime-preview-2024-12-17 | — | token | usd_per_million_tokens | $0.48 |
-| `gpt-4o-mini-search-preview` | gpt-4o-mini-search-preview | — | token | usd_per_million_tokens | $0.12 |
-| `gpt-4o-mini-search-preview-2025-03-11` | gpt-4o-mini-search-preview-2025-03-11 | — | token | usd_per_million_tokens | $0.12 |
 | `gpt-4o-mini-transcribe` | gpt-4o-mini-transcribe | — | token | usd_per_million_tokens | $1.00 |
 | `gpt-4o-realtime-preview` | gpt-4o-realtime-preview | — | token | usd_per_million_tokens | $4.00 |
 | `gpt-4o-realtime-preview-2024-10-01` | gpt-4o-realtime-preview-2024-10-01 | — | token | usd_per_million_tokens | $4.00 |
 | `gpt-4o-realtime-preview-2024-12-17` | gpt-4o-realtime-preview-2024-12-17 | — | token | usd_per_million_tokens | $4.00 |
-| `gpt-4o-realtime-preview-2025-06-03` | gpt-4o-realtime-preview-2025-06-03 | — | token | usd_per_million_tokens | $4.00 |
-| `gpt-4o-search-preview` | gpt-4o-search-preview | — | token | usd_per_million_tokens | $2.00 |
-| `gpt-4o-search-preview-2025-03-11` | gpt-4o-search-preview-2025-03-11 | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-4o-transcribe` | gpt-4o-transcribe | — | token | usd_per_million_tokens | $2.00 |
-| `gpt-4o-transcribe-diarize` | gpt-4o-transcribe-diarize | — | token | usd_per_million_tokens | $2.00 |
 | `gpt-5` | gpt-5 | — | token | usd_per_million_tokens | $1.00 |
 | `gpt-5-2025-08-07` | gpt-5-2025-08-07 | — | token | usd_per_million_tokens | $1.00 |
 | `gpt-5-chat-latest` | gpt-5-chat-latest | — | token | usd_per_million_tokens | $1.00 |
@@ -235,16 +218,11 @@
 | `gpt-5.4-nano` | gpt-5.4-nano | — | token | usd_per_million_tokens | $0.16 |
 | `gpt-5.4-pro` | gpt-5.4-pro | — | token | usd_per_million_tokens | $24.00 |
 | `gpt-5.5` | gpt-5.5 | — | token | usd_per_million_tokens | $4.00 |
-| `gpt-5.5-pro` | gpt-5.5-pro | — | token | usd_per_million_tokens | $24.00 |
 | `gpt-5.6-luna` | gpt-5.6-luna | — | token | usd_per_million_tokens | $0.16 |
 | `gpt-5.6-sol` | gpt-5.6-sol | gpt-5.6 | token | usd_per_million_tokens | $3.20 |
 | `gpt-5.6-terra` | gpt-5.6-terra | — | token | usd_per_million_tokens | $1.60 |
 | `gpt-6-astra` | gpt-6-astra | — | token | usd_per_million_tokens | $8.00 |
 | `gpt-image-1` | gpt-image-1 | — | token | usd_per_million_tokens | — |
-| `gpt-realtime` | gpt-realtime | — | token | usd_per_million_tokens | $3.20 |
-| `gpt-realtime-2025-08-28` | gpt-realtime-2025-08-28 | — | token | usd_per_million_tokens | $3.20 |
-| `gpt-realtime-mini` | gpt-realtime-mini | — | token | usd_per_million_tokens | $0.48 |
-| `gpt-realtime-mini-2025-10-06` | gpt-realtime-mini-2025-10-06 | — | token | usd_per_million_tokens | $0.48 |
 | `grok-4.20-0309-non-reasoning` | grok-4.20-0309-non-reasoning | — | token | usd_per_million_tokens | $1.00 |
 | `grok-4.20-0309-reasoning` | grok-4.20-0309-reasoning | — | token | usd_per_million_tokens | $1.00 |
 | `grok-4.20-multi-agent-0309` | grok-4.20-multi-agent-0309 | — | token | usd_per_million_tokens | $1.00 |
@@ -290,7 +268,6 @@
 | `o4-mini-2025-04-16` | o4-mini-2025-04-16 | — | token | usd_per_million_tokens | $0.88 |
 | `o4-mini-deep-research` | o4-mini-deep-research | — | token | usd_per_million_tokens | $1.60 |
 | `o4-mini-deep-research-2025-06-26` | o4-mini-deep-research-2025-06-26 | — | token | usd_per_million_tokens | $1.60 |
-| `omni-moderation-2024-09-26` | omni-moderation-2024-09-26 | — | token | usd_per_million_tokens | $0.16 |
 | `omni-moderation-latest` | omni-moderation-latest | — | token | usd_per_million_tokens | $0.16 |
 | `qwen-turbo` | qwen-turbo | — | token | usd_per_million_tokens | $0.24 |
 | `qwen3.6-flash` | qwen3.6-flash | — | token | usd_per_million_tokens | $0.1371 |

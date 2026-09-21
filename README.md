@@ -23,7 +23,7 @@ An **AI API aggregator** concentrates access: one credential, one base URL, one 
 This repository is the working companion to that idea — a machine-readable model catalog, the request shapes for each
 modality behind the same key, and the routing patterns that keep a pipeline from double-charging or silently failing over.
 
-<!-- snapshot:date -->2026-09-17<!-- /snapshot:date -->
+<!-- snapshot:date -->2026-09-21<!-- /snapshot:date -->
 
 ## What is in here
 
@@ -41,9 +41,9 @@ modality behind the same key, and the routing patterns that keep a pipeline from
 <!-- catalog:summary:start -->
 | Modality | Models captured | Typical billing unit |
 | --- | --- | --- |
-| Image | 41 | per delivered image (by resolution) |
-| Video | 48 | per second of output (by resolution) |
-| Text / multimodal | 208 | per million tokens (input / cached / output) |
+| Image | 40 | per delivered image (by resolution) |
+| Video | 49 | per second of output (by resolution) |
+| Text / multimodal | 187 | per million tokens (input / cached / output) |
 | Other (per call, per track) | 6 | fixed unit per call |
 <!-- catalog:summary:end -->
 
@@ -79,7 +79,6 @@ The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the
 | Model id | Route | Headline price | Billing unit |
 | --- | --- | --- | --- |
 | `gpt-5.5` | GPT-5.5 | $4.00 | usd_per_million_tokens |
-| `gpt-5.5-pro` | GPT-5.5 Pro | $24.00 | usd_per_million_tokens |
 | `claude-opus-5` | Claude Opus 5 | $4.00 | usd_per_million_tokens |
 | `claude-sonnet-4-6` | Claude Sonnet 4.6 | $2.40 | usd_per_million_tokens |
 | `deepseek-v4-pro` | DeepSeek V4 Pro | $1.03 | usd_per_million_tokens |
@@ -225,7 +224,7 @@ tracking parameters are rejected by `tools/check_links.py` in CI.
 
 APIMart is the aggregator documented here; this repository is published to document it, not to claim official status.
 Model names, prices and documentation belong to their respective owners, and relayed `ext` routes are third-party relay
-endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-17<!-- /snapshot:date -->.
+endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-21<!-- /snapshot:date -->.
 
 ## Repository map
 
