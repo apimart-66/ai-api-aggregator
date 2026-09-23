@@ -1,6 +1,6 @@
 # Unified model catalog
 
-282 models captured from `https://apimart.ai/en/pricing` on 2026-09-22T06:35:45Z.
+283 models captured from `https://apimart.ai/en/pricing` on 2026-09-23T06:36:31Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -229,6 +229,7 @@
 | `grok-4.3` | grok-4.3 | — | token | usd_per_million_tokens | $1.00 |
 | `grok-4.5` | grok-4.5 | — | token | usd_per_million_tokens | $1.60 |
 | `grok-4.6` | grok-4.6 | — | token | usd_per_million_tokens | $1.60 |
+| `grok-4.7` | grok-4.7 | — | token | usd_per_million_tokens | $1.60 |
 | `grok-build-0.1` | grok-build-0.1 | — | token | usd_per_million_tokens | $0.8 |
 | `kimi-k2-instruct` | kimi-k2-instruct | — | token | usd_per_million_tokens | $0.4 |
 | `kimi-k2-thinking` | kimi-k2-thinking | — | token | usd_per_million_tokens | $0.4 |
