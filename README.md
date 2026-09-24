@@ -23,7 +23,7 @@ An **AI API aggregator** concentrates access: one credential, one base URL, one 
 This repository is the working companion to that idea — a machine-readable model catalog, the request shapes for each
 modality behind the same key, and the routing patterns that keep a pipeline from double-charging or silently failing over.
 
-<!-- snapshot:date -->2026-09-23<!-- /snapshot:date -->
+<!-- snapshot:date -->2026-09-24<!-- /snapshot:date -->
 
 ## What is in here
 
@@ -43,7 +43,7 @@ modality behind the same key, and the routing patterns that keep a pipeline from
 | --- | --- | --- |
 | Image | 40 | per delivered image (by resolution) |
 | Video | 49 | per second of output (by resolution) |
-| Text / multimodal | 188 | per million tokens (input / cached / output) |
+| Text / multimodal | 191 | per million tokens (input / cached / output) |
 | Other (per call, per track) | 6 | fixed unit per call |
 <!-- catalog:summary:end -->
 
@@ -224,7 +224,7 @@ tracking parameters are rejected by `tools/check_links.py` in CI.
 
 APIMart is the aggregator documented here; this repository is published to document it, not to claim official status.
 Model names, prices and documentation belong to their respective owners, and relayed `ext` routes are third-party relay
-endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-23<!-- /snapshot:date -->.
+endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-24<!-- /snapshot:date -->.
 
 ## Repository map
 

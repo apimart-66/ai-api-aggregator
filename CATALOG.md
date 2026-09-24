@@ -1,6 +1,6 @@
 # Unified model catalog
 
-283 models captured from `https://apimart.ai/en/pricing` on 2026-09-23T06:36:31Z.
+286 models captured from `https://apimart.ai/en/pricing` on 2026-09-24T06:36:40Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -113,6 +113,7 @@
 | `claude-opus-4-7` | claude-opus-4-7 | — | token | usd_per_million_tokens | $4.00 |
 | `claude-opus-4-8` | claude-opus-4-8 | — | token | usd_per_million_tokens | $4.00 |
 | `claude-opus-5` | claude-opus-5 | — | token | usd_per_million_tokens | $4.00 |
+| `claude-opus-5-5` | claude-opus-5-5 | — | token | usd_per_million_tokens | $3.20 |
 | `claude-sonnet-4-5-20250929` | claude-sonnet-4-5-20250929 | — | token | usd_per_million_tokens | $2.40 |
 | `claude-sonnet-4-5-20250929-thinking` | claude-sonnet-4-5-20250929-thinking | — | token | usd_per_million_tokens | $2.40 |
 | `claude-sonnet-4-6` | claude-sonnet-4-6 | — | token | usd_per_million_tokens | $2.40 |
@@ -222,6 +223,8 @@
 | `gpt-5.6-sol` | gpt-5.6-sol | gpt-5.6 | token | usd_per_million_tokens | $3.20 |
 | `gpt-5.6-terra` | gpt-5.6-terra | — | token | usd_per_million_tokens | $1.60 |
 | `gpt-6-astra` | gpt-6-astra | — | token | usd_per_million_tokens | $8.00 |
+| `gpt-6-luna` | gpt-6-luna | — | token | usd_per_million_tokens | $0.08 |
+| `gpt-6-sol` | gpt-6-sol | — | token | usd_per_million_tokens | $1.60 |
 | `gpt-image-1` | gpt-image-1 | — | token | usd_per_million_tokens | — |
 | `grok-4.20-0309-non-reasoning` | grok-4.20-0309-non-reasoning | — | token | usd_per_million_tokens | $1.00 |
 | `grok-4.20-0309-reasoning` | grok-4.20-0309-reasoning | — | token | usd_per_million_tokens | $1.00 |
