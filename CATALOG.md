@@ -1,6 +1,6 @@
 # Unified model catalog
 
-286 models captured from `https://apimart.ai/en/pricing` on 2026-09-24T06:36:40Z.
+287 models captured from `https://apimart.ai/en/pricing` on 2026-09-25T06:37:22Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -39,6 +39,7 @@
 | `qwen-image-3.0-pro` | qwen-image-3.0-pro | — | image | usd_per_image | $0.0286 |
 | `seedream-4-0` | seedream-4-0 | — | image | usd_per_image | $0.0195 |
 | `seedream-4-5` | seedream-4-5 | — | image | usd_per_image | $0.026 |
+| `seedream-5-0-flash` | seedream-5-0-flash | — | image | usd_per_image | $0.0137 |
 | `seedream-5-0-lite` | seedream-5-0-lite | — | image | usd_per_image | $0.028 |
 | `seedream-5-0-pro` | seedream-5-0-pro | — | image | usd_per_image | $0.036 |
 | `wan2.7-image` | wan2.7-image | — | image | usd_per_image | $0.0216 |
