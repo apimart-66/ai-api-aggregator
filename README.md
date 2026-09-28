@@ -23,7 +23,7 @@ An **AI API aggregator** concentrates access: one credential, one base URL, one 
 This repository is the working companion to that idea — a machine-readable model catalog, the request shapes for each
 modality behind the same key, and the routing patterns that keep a pipeline from double-charging or silently failing over.
 
-<!-- snapshot:date -->2026-09-27<!-- /snapshot:date -->
+<!-- snapshot:date -->2026-09-28<!-- /snapshot:date -->
 
 ## What is in here
 
@@ -41,10 +41,10 @@ modality behind the same key, and the routing patterns that keep a pipeline from
 <!-- catalog:summary:start -->
 | Modality | Models captured | Typical billing unit |
 | --- | --- | --- |
-| Image | 41 | per delivered image (by resolution) |
-| Video | 49 | per second of output (by resolution) |
-| Text / multimodal | 191 | per million tokens (input / cached / output) |
-| Other (per call, per track) | 6 | fixed unit per call |
+| Image | 0 | per delivered image (by resolution) |
+| Video | 0 | per second of output (by resolution) |
+| Text / multimodal | 0 | per million tokens (input / cached / output) |
+| Other (per call, per track) | 0 | fixed unit per call |
 <!-- catalog:summary:end -->
 
 The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the ones most requests land on.
@@ -54,12 +54,6 @@ The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the
 <!-- catalog:image:start -->
 | Model id | Route | Headline price | Billing unit |
 | --- | --- | --- | --- |
-| `gpt-image-2.5-ext` | image2.5 per-image route | $0.0085 | usd_per_image |
-| `gemini-3-pro-image-preview` | Nano Banana Pro | $0.03 | usd_per_image |
-| `gemini-3.1-flash-image-preview` | Nano Banana 2 | $0.015 | usd_per_image |
-| `gemini-2.5-flash-image-preview` | Nano Banana | $0.0125 | usd_per_image |
-| `grok-imagine-1.5-apimart` | Grok Image 1.5 | $0.015 | usd_per_image |
-| `seedream-4-5` | Seedance 4.5 image route | $0.026 | usd_per_image |
 <!-- catalog:image:end -->
 
 ### Video routes
@@ -67,10 +61,6 @@ The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the
 <!-- catalog:video:start -->
 | Model id | Route | Headline price | Billing unit |
 | --- | --- | --- | --- |
-| `seedance-2.5` | Seedance 2.5 | $0.216 | usd_per_second |
-| `seedance-2.0` | Seedance 2.0 | $0.142 | usd_per_second |
-| `seedance-2.0-mini` | Seedance 2.0 mini | $0.0229 | usd_per_second |
-| `kling-3.0-turbo` | Kling 3.0 Turbo | $0.1144 | usd_per_second |
 <!-- catalog:video:end -->
 
 ### Text and multimodal routes
@@ -78,12 +68,6 @@ The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the
 <!-- catalog:token:start -->
 | Model id | Route | Headline price | Billing unit |
 | --- | --- | --- | --- |
-| `gpt-5.5` | GPT-5.5 | $4.00 | usd_per_million_tokens |
-| `claude-opus-5` | Claude Opus 5 | $4.00 | usd_per_million_tokens |
-| `claude-sonnet-4-6` | Claude Sonnet 4.6 | $2.40 | usd_per_million_tokens |
-| `deepseek-v4-pro` | DeepSeek V4 Pro | $1.03 | usd_per_million_tokens |
-| `deepseek-v4-flash` | DeepSeek V4 Flash | $0.3429 | usd_per_million_tokens |
-| `gpt-5-mini` | GPT-5 mini | $0.2 | usd_per_million_tokens |
 <!-- catalog:token:end -->
 
 ## One key, several request shapes
@@ -224,7 +208,7 @@ tracking parameters are rejected by `tools/check_links.py` in CI.
 
 APIMart is the aggregator documented here; this repository is published to document it, not to claim official status.
 Model names, prices and documentation belong to their respective owners, and relayed `ext` routes are third-party relay
-endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-27<!-- /snapshot:date -->.
+endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-09-28<!-- /snapshot:date -->.
 
 ## Repository map
 
