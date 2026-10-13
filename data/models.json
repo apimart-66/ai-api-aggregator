@@ -1,8 +1,1282 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-10-12T06:48:46Z",
-  "model_count": 0,
-  "specification_counts": {},
-  "models": []
+  "extracted_at": "2026-10-13T06:47:26Z",
+  "model_count": 47,
+  "specification_counts": {
+    "image": 43,
+    "token": 4
+  },
+  "models": [
+    {
+      "id": "dall-e-3",
+      "name": "DALL-E 3",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.04,
+          "effective": 0.032
+        }
+      }
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_call",
+      "prices": {
+        "default": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "blend": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "blend-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "blend-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "describe": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "describe-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "describe-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "edits": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "edits-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "edits-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "high_variation": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "high_variation-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "high_variation-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-niji6": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-niji6-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-niji6-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-niji7": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-niji7-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-niji7-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-v5.1": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-v5.1-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-v5.1-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-v5.2": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-v5.2-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-v5.2-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-v6.1": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-v6.1-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-v6.1-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-v7": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-v7-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-v7-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-v8.1": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-v8.1-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-v8.1-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "imagine-v8.2": {
+          "list": 0.0563,
+          "effective": 0.04504
+        },
+        "imagine-v8.2-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "imagine-v8.2-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "inpaint": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "inpaint-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "inpaint-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "low_variation": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "low_variation-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "low_variation-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "modal": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "modal-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "modal-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "pan": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "pan-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "pan-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "remix_strong": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "remix_strong-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "remix_strong-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "remix_subtle": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "remix_subtle-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "remix_subtle-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "reroll": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "reroll-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "reroll-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "shorten": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "shorten-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "shorten-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "upscale": {
+          "list": 0,
+          "effective": 0
+        },
+        "upscale-fast": {
+          "list": 0,
+          "effective": 0
+        },
+        "upscale-hd": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "upscale-hd-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "upscale-hd-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "upscale-relax": {
+          "list": 0,
+          "effective": 0
+        },
+        "upscale-turbo": {
+          "list": 0,
+          "effective": 0
+        },
+        "variation": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "variation-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "variation-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        },
+        "video": {
+          "list": 0.25,
+          "effective": 0.2
+        },
+        "video-720p": {
+          "list": 0.5,
+          "effective": 0.4
+        },
+        "zoom": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "zoom-fast": {
+          "list": 0.0688,
+          "effective": 0.05504
+        },
+        "zoom-turbo": {
+          "list": 0.125,
+          "effective": 0.1
+        }
+      }
+    },
+    {
+      "id": "gemini-2.5-flash-image-preview",
+      "name": "Nano Banana",
+      "alias": "nano-banana-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.015625,
+          "effective": 0.0125
+        }
+      }
+    },
+    {
+      "id": "gemini-3.1-flash-image-preview",
+      "name": "Nano Banana 2",
+      "alias": "nano-banana-2-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.01875,
+          "effective": 0.015
+        },
+        "0.5K": {
+          "list": 0.01875,
+          "effective": 0.015
+        },
+        "1K": {
+          "list": 0.01875,
+          "effective": 0.015
+        },
+        "2K": {
+          "list": 0.025,
+          "effective": 0.02
+        },
+        "4K": {
+          "list": 0.03125,
+          "effective": 0.025
+        }
+      }
+    },
+    {
+      "id": "gemini-nano-banana-2.1",
+      "name": "Nano Banana 2.1",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 1.5,
+          "cached_text_input": 0,
+          "image_input": 1.5,
+          "cached_image_input": 0,
+          "text_output": 7.5,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 1.2,
+          "cached_text_input": 0,
+          "image_input": 1.2,
+          "cached_image_input": 0,
+          "text_output": 6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gemini-3-pro-image-preview",
+      "name": "Nano Banana Pro",
+      "alias": "nano-banana-pro-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.0375,
+          "effective": 0.03
+        },
+        "4K": {
+          "list": 0.05,
+          "effective": 0.04
+        }
+      }
+    },
+    {
+      "id": "flux-2-flex",
+      "name": "flux-2",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "1MP": {
+          "list": 0.05,
+          "effective": 0.04
+        },
+        "2MP": {
+          "list": 0.1,
+          "effective": 0.08
+        },
+        "3MP": {
+          "list": 0.15,
+          "effective": 0.12
+        },
+        "4MP": {
+          "list": 0.2,
+          "effective": 0.16
+        }
+      }
+    },
+    {
+      "id": "flux-2-max",
+      "name": "flux-2-max",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.1,
+          "effective": 0.08
+        },
+        "1MP": {
+          "list": 0.07,
+          "effective": 0.056
+        },
+        "2MP": {
+          "list": 0.1,
+          "effective": 0.08
+        },
+        "3MP": {
+          "list": 0.13,
+          "effective": 0.104
+        },
+        "4MP": {
+          "list": 0.16,
+          "effective": 0.128
+        }
+      }
+    },
+    {
+      "id": "flux-2-pro",
+      "name": "flux-2-pro",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "1MP": {
+          "list": 0.03,
+          "effective": 0.024
+        },
+        "2MP": {
+          "list": 0.045,
+          "effective": 0.036
+        },
+        "3MP": {
+          "list": 0.06,
+          "effective": 0.048
+        },
+        "4MP": {
+          "list": 0.075,
+          "effective": 0.06
+        }
+      }
+    },
+    {
+      "id": "flux-3-image",
+      "name": "flux-3-image",
+      "alias": "$undefined",
+      "specification": "token",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": null,
+          "effective": 0.0384
+        },
+        "1.5K": {
+          "list": null,
+          "effective": 0.056
+        },
+        "1K": {
+          "list": null,
+          "effective": 0.0384
+        },
+        "2K": {
+          "list": null,
+          "effective": 0.08
+        },
+        "4K": {
+          "list": null,
+          "effective": 0.4856
+        },
+        "768SQ": {
+          "list": null,
+          "effective": 0.0328
+        }
+      }
+    },
+    {
+      "id": "flux-kontext-max",
+      "name": "flux-kontext",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.08,
+          "effective": 0.064
+        }
+      }
+    },
+    {
+      "id": "flux-kontext-pro",
+      "name": "flux-kontext-pro",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.04,
+          "effective": 0.032
+        }
+      }
+    },
+    {
+      "id": "gemini-2.5-flash-image-preview-official",
+      "name": "gemini-2.5-flash-image-preview-official",
+      "alias": "nano-banana",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 0.3,
+          "cached_text_input": 0,
+          "image_input": 0.3,
+          "cached_image_input": 0,
+          "text_output": 2.5,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 0.24,
+          "cached_text_input": 0,
+          "image_input": 0.24,
+          "cached_image_input": 0,
+          "text_output": 2,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gemini-3-pro-image-preview-official",
+      "name": "gemini-3-pro-image-preview-official",
+      "alias": "nano-banana-pro",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 2,
+          "cached_text_input": 0,
+          "image_input": 2,
+          "cached_image_input": 0,
+          "text_output": 12,
+          "image_output": 120
+        },
+        "effective": {
+          "text_input": 1.6,
+          "cached_text_input": 0,
+          "image_input": 1.6,
+          "cached_image_input": 0,
+          "text_output": 9.6,
+          "image_output": 96
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gemini-3.1-flash-image-preview-official",
+      "name": "gemini-3.1-flash-image-preview-official",
+      "alias": "nano-banana-2",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 0.5,
+          "cached_text_input": 0,
+          "image_input": 0.5,
+          "cached_image_input": 0,
+          "text_output": 3,
+          "image_output": 60
+        },
+        "effective": {
+          "text_input": 0.4,
+          "cached_text_input": 0,
+          "image_input": 0.4,
+          "cached_image_input": 0,
+          "text_output": 2.4,
+          "image_output": 48
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gemini-3.1-flash-lite-image",
+      "name": "gemini-3.1-flash-lite-image",
+      "alias": "nano-banana-2-lite",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 0.25,
+          "cached_text_input": 0,
+          "image_input": 0.25,
+          "cached_image_input": 0,
+          "text_output": 1.5,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 0.2,
+          "cached_text_input": 0,
+          "image_input": 0.2,
+          "cached_image_input": 0,
+          "text_output": 1.2,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gemini-3.1-flash-lite-image-ext",
+      "name": "gemini-3.1-flash-lite-image-ext",
+      "alias": "nano-banana-2-lite-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.015625,
+          "effective": 0.0125
+        }
+      }
+    },
+    {
+      "id": "gemini-nano-banana-2.1-ext",
+      "name": "gemini-nano-banana-2.1-ext",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.025,
+          "effective": 0.02
+        },
+        "1K": {
+          "list": 0.025,
+          "effective": 0.02
+        },
+        "2K": {
+          "list": 0.03125,
+          "effective": 0.025
+        },
+        "4K": {
+          "list": 0.0375,
+          "effective": 0.03
+        }
+      }
+    },
+    {
+      "id": "gpt-image-1",
+      "name": "gpt-image-1",
+      "alias": "$undefined",
+      "specification": "token",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 10,
+          "cached_image_input": 2.5,
+          "image_output": 40
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 32
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-1-official",
+      "name": "gpt-image-1-official",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 10,
+          "cached_image_input": 2.5,
+          "image_output": 40
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 32
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-1.5-official",
+      "name": "gpt-image-1.5-official",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "text_output": 10,
+          "image_output": 32
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "text_output": 8,
+          "image_output": 25.6
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-2",
+      "name": "gpt-image-2",
+      "alias": "gpt-image-2-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.010625,
+          "effective": 0.0085
+        },
+        "1K": {
+          "list": 0.2109,
+          "effective": 0.0085
+        },
+        "2K": {
+          "list": 0.4283,
+          "effective": 0.014
+        },
+        "4K": {
+          "list": 0.7117,
+          "effective": 0.021
+        }
+      }
+    },
+    {
+      "id": "gpt-image-2-official",
+      "name": "gpt-image-2-official",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-2.5-flare",
+      "name": "gpt-image-2.5",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-2.5-ext",
+      "name": "gpt-image-2.5-ext",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "flare@1K": {
+          "list": 0.010625,
+          "effective": 0.0085
+        },
+        "flare@2K": {
+          "list": 0.0175,
+          "effective": 0.014
+        },
+        "flare@4K": {
+          "list": 0.02625,
+          "effective": 0.021
+        },
+        "sunburst@1K": {
+          "list": 0.010625,
+          "effective": 0.0085
+        },
+        "sunburst@2K": {
+          "list": 0.0175,
+          "effective": 0.014
+        },
+        "sunburst@4K": {
+          "list": 0.02625,
+          "effective": 0.021
+        }
+      }
+    },
+    {
+      "id": "gpt-image-2.5-sunburst",
+      "name": "gpt-image-2.5-sunburst",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "grok-imagine-1.5-apimart",
+      "name": "grok-imagine-1.5-apimart",
+      "alias": "grok-imagine-1.5-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.01875,
+          "effective": 0.015
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-1.5-edit-apimart",
+      "name": "grok-imagine-1.5-extï¼grok-imagine-1.5-apimartï¼",
+      "alias": "grok-imagine-1.5-edit-ext",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.01875,
+          "effective": 0.015
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-2.0-ext",
+      "name": "grok-imagine-2.0-ext",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.06,
+          "effective": 0.015
+        },
+        "region-edit": {
+          "list": 0.01875,
+          "effective": 0.015
+        },
+        "upload-image": {
+          "list": 0,
+          "effective": 0
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-image",
+      "name": "grok-imagine-image",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "1K": {
+          "list": 0.02,
+          "effective": 0.016
+        },
+        "2K": {
+          "list": 0.02,
+          "effective": 0.016
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-image-2.0",
+      "name": "grok-imagine-image-2.0",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "1K@low": {
+          "list": 0.04,
+          "effective": 0.032
+        },
+        "1K@medium": {
+          "list": 0.06,
+          "effective": 0.048
+        },
+        "2K@low": {
+          "list": 0.06,
+          "effective": 0.048
+        },
+        "2K@medium": {
+          "list": 0.08,
+          "effective": 0.064
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-image-quality",
+      "name": "grok-imagine-image-quality",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "1K": {
+          "list": 0.05,
+          "effective": 0.04
+        },
+        "2K": {
+          "list": 0.07,
+          "effective": 0.056
+        }
+      }
+    },
+    {
+      "id": "imagen-4.0-apimart",
+      "name": "imagen-4.0-apimart",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.05,
+          "effective": 0.04
+        }
+      }
+    },
+    {
+      "id": "mai-image-2.6",
+      "name": "mai-image-2.6",
+      "alias": "$undefined",
+      "specification": "token",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 0,
+          "image_input": 8,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 38
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 0,
+          "image_input": 6.4,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 30.4
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "mai-image-2.6-flash",
+      "name": "mai-image-2.6-flash",
+      "alias": "$undefined",
+      "specification": "token",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 1.75,
+          "cached_text_input": 0,
+          "image_input": 2.5,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 19
+        },
+        "effective": {
+          "text_input": 1.4,
+          "cached_text_input": 0,
+          "image_input": 2,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 15.2
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "qwen-image-2.0",
+      "name": "qwen-image-2.0",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.025,
+          "effective": 0.02
+        }
+      }
+    },
+    {
+      "id": "qwen-image-2.0-pro",
+      "name": "qwen-image-2.0-pro",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.0625,
+          "effective": 0.05
+        }
+      }
+    },
+    {
+      "id": "qwen-image-3.0",
+      "name": "qwen-image-3.0",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.025714,
+          "effective": 0.0205712
+        },
+        "1K": {
+          "list": 0.025714,
+          "effective": 0.0205712
+        },
+        "2K": {
+          "list": 0.025714,
+          "effective": 0.0205712
+        }
+      }
+    },
+    {
+      "id": "qwen-image-3.0-pro",
+      "name": "qwen-image-3.0-pro",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.035714,
+          "effective": 0.0285712
+        },
+        "1K": {
+          "list": 0.035714,
+          "effective": 0.0285712
+        },
+        "2K": {
+          "list": 0.071429,
+          "effective": 0.0571432
+        }
+      }
+    },
+    {
+      "id": "seedream-4-0",
+      "name": "seedream-4-0",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.024375,
+          "effective": 0.0195
+        }
+      }
+    },
+    {
+      "id": "seedream-4-5",
+      "name": "seedream-4-5",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.0325,
+          "effective": 0.026
+        }
+      }
+    },
+    {
+      "id": "seedream-5-0-flash",
+      "name": "seedream-5-0-flash",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.017143,
+          "effective": 0.0137144
+        }
+      }
+    },
+    {
+      "id": "seedream-5-0-lite",
+      "name": "seedream-5-0-lite",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.035,
+          "effective": 0.028
+        }
+      }
+    },
+    {
+      "id": "seedream-5-0-pro",
+      "name": "seedream-5-0-pro",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.045,
+          "effective": 0.036
+        },
+        "1K": {
+          "list": 0.0365625,
+          "effective": 0.02925
+        },
+        "1K-layer": {
+          "list": 0.01828125,
+          "effective": 0.014625
+        },
+        "2K": {
+          "list": 0.073125,
+          "effective": 0.0585
+        },
+        "2K-layer": {
+          "list": 0.0365625,
+          "effective": 0.02925
+        }
+      }
+    },
+    {
+      "id": "wan2.7-image",
+      "name": "wan2.7-image",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.027,
+          "effective": 0.0216
+        }
+      }
+    },
+    {
+      "id": "wan2.7-image-pro",
+      "name": "wan2.7-image-pro",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.068,
+          "effective": 0.0544
+        }
+      }
+    },
+    {
+      "id": "z-image-turbo",
+      "name": "z-image-turbo",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.0125,
+          "effective": 0.01
+        },
+        "prompt_extend": {
+          "list": 0.025,
+          "effective": 0.02
+        }
+      }
+    }
+  ]
 }
