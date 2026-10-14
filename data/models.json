@@ -1,7 +1,7 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-10-13T06:47:26Z",
+  "extracted_at": "2026-10-14T07:03:13Z",
   "model_count": 47,
   "specification_counts": {
     "image": 43,
@@ -802,11 +802,11 @@
         },
         "2K": {
           "list": 0.4283,
-          "effective": 0.014
+          "effective": 0.015
         },
         "4K": {
           "list": 0.7117,
-          "effective": 0.021
+          "effective": 0.022
         }
       }
     },
@@ -871,11 +871,11 @@
         },
         "flare@2K": {
           "list": 0.0175,
-          "effective": 0.014
+          "effective": 0.03
         },
         "flare@4K": {
           "list": 0.02625,
-          "effective": 0.021
+          "effective": 0.04
         },
         "sunburst@1K": {
           "list": 0.010625,
@@ -883,11 +883,11 @@
         },
         "sunburst@2K": {
           "list": 0.0175,
-          "effective": 0.014
+          "effective": 0.03
         },
         "sunburst@4K": {
           "list": 0.02625,
-          "effective": 0.021
+          "effective": 0.04
         }
       }
     },
