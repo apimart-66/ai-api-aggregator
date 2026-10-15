@@ -1,7 +1,7 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-10-14T07:03:13Z",
+  "extracted_at": "2026-10-15T07:04:37Z",
   "model_count": 47,
   "specification_counts": {
     "image": 43,
@@ -432,8 +432,34 @@
       }
     },
     {
+      "id": "gemini-3.1-flash-lite-image",
+      "name": "Nano-Banana-2-Lite",
+      "alias": "nano-banana-2-lite",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 0.25,
+          "cached_text_input": 0,
+          "image_input": 0.25,
+          "cached_image_input": 0,
+          "text_output": 1.5,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 0.2,
+          "cached_text_input": 0,
+          "image_input": 0.2,
+          "cached_image_input": 0,
+          "text_output": 1.2,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
       "id": "flux-2-flex",
-      "name": "flux-2",
+      "name": "flux-2-flex",
       "alias": "$undefined",
       "specification": "image",
       "unit": "usd_per_image",
@@ -545,7 +571,7 @@
     },
     {
       "id": "flux-kontext-max",
-      "name": "flux-kontext",
+      "name": "flux-kontext-max",
       "alias": "$undefined",
       "specification": "image",
       "unit": "usd_per_image",
@@ -643,32 +669,6 @@
           "cached_image_input": 0,
           "text_output": 2.4,
           "image_output": 48
-        }
-      },
-      "billing_type": "tiered_token"
-    },
-    {
-      "id": "gemini-3.1-flash-lite-image",
-      "name": "gemini-3.1-flash-lite-image",
-      "alias": "nano-banana-2-lite",
-      "specification": "image",
-      "unit": "usd_per_million_tokens",
-      "prices": {
-        "list": {
-          "text_input": 0.25,
-          "cached_text_input": 0,
-          "image_input": 0.25,
-          "cached_image_input": 0,
-          "text_output": 1.5,
-          "image_output": 30
-        },
-        "effective": {
-          "text_input": 0.2,
-          "cached_text_input": 0,
-          "image_input": 0.2,
-          "cached_image_input": 0,
-          "text_output": 1.2,
-          "image_output": 24
         }
       },
       "billing_type": "tiered_token"
@@ -835,30 +835,6 @@
       "billing_type": "tiered_token"
     },
     {
-      "id": "gpt-image-2.5-flare",
-      "name": "gpt-image-2.5",
-      "alias": "$undefined",
-      "specification": "image",
-      "unit": "usd_per_million_tokens",
-      "prices": {
-        "list": {
-          "text_input": 5,
-          "cached_text_input": 1.25,
-          "image_input": 8,
-          "cached_image_input": 2,
-          "image_output": 30
-        },
-        "effective": {
-          "text_input": 4,
-          "cached_text_input": 1,
-          "image_input": 6.4,
-          "cached_image_input": 1.6,
-          "image_output": 24
-        }
-      },
-      "billing_type": "tiered_token"
-    },
-    {
       "id": "gpt-image-2.5-ext",
       "name": "gpt-image-2.5-ext",
       "alias": "$undefined",
@@ -890,6 +866,30 @@
           "effective": 0.04
         }
       }
+    },
+    {
+      "id": "gpt-image-2.5-flare",
+      "name": "gpt-image-2.5-flare",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
     },
     {
       "id": "gpt-image-2.5-sunburst",

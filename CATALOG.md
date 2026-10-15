@@ -1,14 +1,14 @@
 # Unified model catalog
 
-47 models captured from `https://apimart.ai/en/pricing` on 2026-10-14T07:03:13Z.
+47 models captured from `https://apimart.ai/en/pricing` on 2026-10-15T07:04:37Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
 | `dall-e-3` | DALL-E 3 | $undefined | image | usd_per_image | $0.032 |
-| `flux-2-flex` | flux-2 | $undefined | image | usd_per_image | — |
+| `flux-2-flex` | flux-2-flex | $undefined | image | usd_per_image | — |
 | `flux-2-max` | flux-2-max | $undefined | image | usd_per_image | $0.08 |
 | `flux-2-pro` | flux-2-pro | $undefined | image | usd_per_image | — |
-| `flux-kontext-max` | flux-kontext | $undefined | image | usd_per_image | $0.064 |
+| `flux-kontext-max` | flux-kontext-max | $undefined | image | usd_per_image | $0.064 |
 | `flux-kontext-pro` | flux-kontext-pro | $undefined | image | usd_per_image | $0.032 |
 | `gemini-2.5-flash-image-preview` | Nano Banana | nano-banana-ext | image | usd_per_image | $0.0125 |
 | `gemini-2.5-flash-image-preview-official` | gemini-2.5-flash-image-preview-official | nano-banana | image | usd_per_million_tokens | — |
@@ -16,7 +16,7 @@
 | `gemini-3-pro-image-preview-official` | gemini-3-pro-image-preview-official | nano-banana-pro | image | usd_per_million_tokens | — |
 | `gemini-3.1-flash-image-preview` | Nano Banana 2 | nano-banana-2-ext | image | usd_per_image | $0.015 |
 | `gemini-3.1-flash-image-preview-official` | gemini-3.1-flash-image-preview-official | nano-banana-2 | image | usd_per_million_tokens | — |
-| `gemini-3.1-flash-lite-image` | gemini-3.1-flash-lite-image | nano-banana-2-lite | image | usd_per_million_tokens | — |
+| `gemini-3.1-flash-lite-image` | Nano-Banana-2-Lite | nano-banana-2-lite | image | usd_per_million_tokens | — |
 | `gemini-3.1-flash-lite-image-ext` | gemini-3.1-flash-lite-image-ext | nano-banana-2-lite-ext | image | usd_per_image | $0.0125 |
 | `gemini-nano-banana-2.1` | Nano Banana 2.1 | $undefined | image | usd_per_million_tokens | — |
 | `gemini-nano-banana-2.1-ext` | gemini-nano-banana-2.1-ext | $undefined | image | usd_per_image | $0.02 |
@@ -25,7 +25,7 @@
 | `gpt-image-2` | gpt-image-2 | gpt-image-2-ext | image | usd_per_image | $0.0085 |
 | `gpt-image-2-official` | gpt-image-2-official | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-2.5-ext` | gpt-image-2.5-ext | $undefined | image | usd_per_image | $0.0085 |
-| `gpt-image-2.5-flare` | gpt-image-2.5 | $undefined | image | usd_per_million_tokens | — |
+| `gpt-image-2.5-flare` | gpt-image-2.5-flare | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-2.5-sunburst` | gpt-image-2.5-sunburst | $undefined | image | usd_per_million_tokens | — |
 | `grok-imagine-1.5-apimart` | grok-imagine-1.5-apimart | grok-imagine-1.5-ext | image | usd_per_image | $0.015 |
 | `grok-imagine-1.5-edit-apimart` | grok-imagine-1.5-extï¼grok-imagine-1.5-apimartï¼ | grok-imagine-1.5-edit-ext | image | usd_per_image | $0.015 |
