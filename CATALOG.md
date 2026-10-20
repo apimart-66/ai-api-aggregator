@@ -1,6 +1,6 @@
 # Unified model catalog
 
-47 models captured from `https://apimart.ai/en/pricing` on 2026-10-19T13:29:03Z.
+48 models captured from `https://apimart.ai/en/pricing` on 2026-10-20T11:46:36Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -8,6 +8,7 @@
 | `flux-2-flex` | flux-2-flex | $undefined | image | usd_per_image | — |
 | `flux-2-max` | flux-2-max | $undefined | image | usd_per_image | $0.08 |
 | `flux-2-pro` | flux-2-pro | $undefined | image | usd_per_image | — |
+| `flux-3-image-klein` | flux-3-image-klein | $undefined | image | usd_per_image | $0.0072 |
 | `flux-kontext-max` | flux-kontext-max | $undefined | image | usd_per_image | $0.064 |
 | `flux-kontext-pro` | flux-kontext-pro | $undefined | image | usd_per_image | $0.032 |
 | `gemini-2.5-flash-image-preview` | Nano Banana | nano-banana-ext | image | usd_per_image | $0.0125 |

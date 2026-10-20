@@ -1,10 +1,10 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-10-19T13:29:03Z",
-  "model_count": 47,
+  "extracted_at": "2026-10-20T11:46:36Z",
+  "model_count": 48,
   "specification_counts": {
-    "image": 43,
+    "image": 44,
     "token": 4
   },
   "models": [
@@ -566,6 +566,39 @@
         "768SQ": {
           "list": null,
           "effective": 0.0328
+        }
+      }
+    },
+    {
+      "id": "flux-3-image-klein",
+      "name": "flux-3-image-klein",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.009,
+          "effective": 0.0072
+        },
+        "1.5K": {
+          "list": 0.011,
+          "effective": 0.0088
+        },
+        "1K": {
+          "list": 0.009,
+          "effective": 0.0072
+        },
+        "2K": {
+          "list": 0.014,
+          "effective": 0.0112
+        },
+        "4K": {
+          "list": 0.036,
+          "effective": 0.0288
+        },
+        "768SQ": {
+          "list": 0.008,
+          "effective": 0.0064
         }
       }
     },
