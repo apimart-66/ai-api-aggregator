@@ -23,7 +23,7 @@ An **AI API aggregator** concentrates access: one credential, one base URL, one 
 This repository is the working companion to that idea — a machine-readable model catalog, the request shapes for each
 modality behind the same key, and the routing patterns that keep a pipeline from double-charging or silently failing over.
 
-<!-- snapshot:date -->2026-10-20<!-- /snapshot:date -->
+<!-- snapshot:date -->2026-10-21<!-- /snapshot:date -->
 
 ## What is in here
 
@@ -41,7 +41,7 @@ modality behind the same key, and the routing patterns that keep a pipeline from
 <!-- catalog:summary:start -->
 | Modality | Models captured | Typical billing unit |
 | --- | --- | --- |
-| Image | 44 | per delivered image (by resolution) |
+| Image | 45 | per delivered image (by resolution) |
 | Video | 0 | per second of output (by resolution) |
 | Text / multimodal | 4 | per million tokens (input / cached / output) |
 | Other (per call, per track) | 0 | fixed unit per call |
@@ -55,9 +55,9 @@ The full list lives in [`CATALOG.md`](CATALOG.md). Headline routes below are the
 | Model id | Route | Headline price | Billing unit |
 | --- | --- | --- | --- |
 | `gpt-image-2.5-ext` | image2.5 per-image route | $0.0085 | usd_per_image |
-| `gemini-3-pro-image-preview` | Nano Banana Pro | $0.03 | usd_per_image |
+| `gemini-3-pro-image-preview` | Nano Banana Pro | $0.02 | usd_per_image |
 | `gemini-3.1-flash-image-preview` | Nano Banana 2 | $0.015 | usd_per_image |
-| `gemini-2.5-flash-image-preview` | Nano Banana | $0.0125 | usd_per_image |
+| `gemini-2.5-flash-image-preview` | Nano Banana | $0.008 | usd_per_image |
 | `grok-imagine-1.5-apimart` | Grok Image 1.5 | $0.015 | usd_per_image |
 | `seedream-4-5` | Seedance 4.5 image route | $0.026 | usd_per_image |
 <!-- catalog:image:end -->
@@ -214,7 +214,7 @@ tracking parameters are rejected by `tools/check_links.py` in CI.
 
 APIMart is the aggregator documented here; this repository is published to document it, not to claim official status.
 Model names, prices and documentation belong to their respective owners, and relayed `ext` routes are third-party relay
-endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-10-20<!-- /snapshot:date -->.
+endpoints rather than first-party vendor endpoints. Snapshot date: <!-- snapshot:date -->2026-10-21<!-- /snapshot:date -->.
 
 ## Repository map
 
