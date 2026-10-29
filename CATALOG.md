@@ -1,6 +1,6 @@
 # Unified model catalog
 
-49 models captured from `https://apimart.ai/en/pricing` on 2026-10-28T13:05:18Z.
+50 models captured from `https://apimart.ai/en/pricing` on 2026-10-29T13:11:53Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -37,6 +37,7 @@
 | `hy-image-v3.5-preview` | hy-image-v3.5-preview | $undefined | image | usd_per_image | $0.0192 |
 | `imagen-4.0-apimart` | imagen-4.0-apimart | $undefined | image | usd_per_image | $0.04 |
 | `midjourney` | Midjourney | $undefined | image | usd_per_call | $0.045 |
+| `muse-image-ext` | muse-image-ext | $undefined | image | usd_per_image | $0.0048 |
 | `qwen-image-2.0` | qwen-image-2.0 | $undefined | image | usd_per_image | $0.02 |
 | `qwen-image-2.0-pro` | qwen-image-2.0-pro | $undefined | image | usd_per_image | $0.05 |
 | `qwen-image-3.0` | qwen-image-3.0 | $undefined | image | usd_per_image | $0.0206 |

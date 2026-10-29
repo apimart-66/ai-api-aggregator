@@ -1,10 +1,10 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-10-28T13:05:18Z",
-  "model_count": 49,
+  "extracted_at": "2026-10-29T13:11:53Z",
+  "model_count": 50,
   "specification_counts": {
-    "image": 45,
+    "image": 46,
     "token": 4
   },
   "models": [
@@ -879,11 +879,11 @@
           "effective": 0.0085
         },
         "flare@2K": {
-          "list": 0.0175,
+          "list": 0.0375,
           "effective": 0.03
         },
         "flare@4K": {
-          "list": 0.02625,
+          "list": 0.05,
           "effective": 0.04
         },
         "sunburst@1K": {
@@ -891,11 +891,11 @@
           "effective": 0.0085
         },
         "sunburst@2K": {
-          "list": 0.0175,
+          "list": 0.0375,
           "effective": 0.03
         },
         "sunburst@4K": {
-          "list": 0.02625,
+          "list": 0.05,
           "effective": 0.04
         }
       }
@@ -1143,6 +1143,19 @@
         }
       },
       "billing_type": "tiered_token"
+    },
+    {
+      "id": "muse-image-ext",
+      "name": "muse-image-ext",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.01,
+          "effective": 0.0048
+        }
+      }
     },
     {
       "id": "qwen-image-2.0",
