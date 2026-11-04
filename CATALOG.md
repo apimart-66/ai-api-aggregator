@@ -1,6 +1,6 @@
 # Unified model catalog
 
-50 models captured from `https://apimart.ai/en/pricing` on 2026-11-03T14:25:37Z.
+50 models captured from `https://apimart.ai/en/pricing` on 2026-11-04T14:40:06Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
