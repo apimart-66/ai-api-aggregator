@@ -1,10 +1,10 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-11-04T14:40:06Z",
-  "model_count": 50,
+  "extracted_at": "2026-11-05T14:44:26Z",
+  "model_count": 53,
   "specification_counts": {
-    "image": 46,
+    "image": 49,
     "token": 4
   },
   "models": [
@@ -927,6 +927,71 @@
     {
       "id": "gpt-image-2.5-sunburst",
       "name": "gpt-image-2.5-sunburst",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-2.6-ext",
+      "name": "gpt-image-2.6-ext",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "flare@1K": {
+          "list": 0.010625,
+          "effective": 0.0085
+        },
+        "sunburst@1K": {
+          "list": 0.010625,
+          "effective": 0.0085
+        }
+      }
+    },
+    {
+      "id": "gpt-image-2.6-flare",
+      "name": "gpt-image-2.6-flare",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "image_output": 30
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "image_output": 24
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-2.6-sunburst",
+      "name": "gpt-image-2.6-sunburst",
       "alias": "$undefined",
       "specification": "image",
       "unit": "usd_per_million_tokens",

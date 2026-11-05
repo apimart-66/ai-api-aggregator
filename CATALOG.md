@@ -1,6 +1,6 @@
 # Unified model catalog
 
-50 models captured from `https://apimart.ai/en/pricing` on 2026-11-04T14:40:06Z.
+53 models captured from `https://apimart.ai/en/pricing` on 2026-11-05T14:44:26Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -28,6 +28,9 @@
 | `gpt-image-2.5-ext` | gpt-image-2.5-ext | $undefined | image | usd_per_image | $0.0085 |
 | `gpt-image-2.5-flare` | gpt-image-2.5-flare | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-2.5-sunburst` | gpt-image-2.5-sunburst | $undefined | image | usd_per_million_tokens | — |
+| `gpt-image-2.6-ext` | gpt-image-2.6-ext | $undefined | image | usd_per_image | $0.0085 |
+| `gpt-image-2.6-flare` | gpt-image-2.6-flare | $undefined | image | usd_per_million_tokens | — |
+| `gpt-image-2.6-sunburst` | gpt-image-2.6-sunburst | $undefined | image | usd_per_million_tokens | — |
 | `grok-imagine-1.5-apimart` | grok-imagine-1.5-apimart | grok-imagine-1.5-ext | image | usd_per_image | $0.015 |
 | `grok-imagine-1.5-edit-apimart` | grok-imagine-1.5-extï¼grok-imagine-1.5-apimartï¼ | grok-imagine-1.5-edit-ext | image | usd_per_image | $0.015 |
 | `grok-imagine-2.0-ext` | grok-imagine-2.0-ext | $undefined | image | usd_per_image | $0.015 |
