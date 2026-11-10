@@ -1,10 +1,10 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-11-09T16:31:39Z",
-  "model_count": 53,
+  "extracted_at": "2026-11-10T14:58:52Z",
+  "model_count": 54,
   "specification_counts": {
-    "image": 49,
+    "image": 50,
     "token": 4
   },
   "models": [
@@ -544,7 +544,7 @@
       "unit": "usd_per_image",
       "prices": {
         "default": {
-          "list": null,
+          "list": 0.048,
           "effective": 0.0384
         },
         "1.5K": {
@@ -1384,6 +1384,35 @@
         "2K-layer": {
           "list": 0.0365625,
           "effective": 0.02925
+        }
+      }
+    },
+    {
+      "id": "seedream-5-5",
+      "name": "seedream-5-5",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.035,
+          "effective": 0.02275
+        },
+        "1K": {
+          "list": 0.02,
+          "effective": 0.013
+        },
+        "1K-layer": {
+          "list": 0.02,
+          "effective": 0.013
+        },
+        "2K": {
+          "list": 0.035,
+          "effective": 0.02275
+        },
+        "2K-layer": {
+          "list": 0.035,
+          "effective": 0.02275
         }
       }
     },

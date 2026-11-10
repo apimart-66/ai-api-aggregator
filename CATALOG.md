@@ -1,6 +1,6 @@
 # Unified model catalog
 
-53 models captured from `https://apimart.ai/en/pricing` on 2026-11-09T16:31:39Z.
+54 models captured from `https://apimart.ai/en/pricing` on 2026-11-10T14:58:52Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -50,6 +50,7 @@
 | `seedream-5-0-flash` | seedream-5-0-flash | $undefined | image | usd_per_image | $0.0137 |
 | `seedream-5-0-lite` | seedream-5-0-lite | $undefined | image | usd_per_image | $0.028 |
 | `seedream-5-0-pro` | seedream-5-0-pro | $undefined | image | usd_per_image | $0.036 |
+| `seedream-5-5` | seedream-5-5 | $undefined | image | usd_per_image | $0.0227 |
 | `wan2.7-image` | wan2.7-image | $undefined | image | usd_per_image | $0.0216 |
 | `wan2.7-image-pro` | wan2.7-image-pro | $undefined | image | usd_per_image | $0.0544 |
 | `z-image-turbo` | z-image-turbo | $undefined | image | usd_per_image | $0.01 |
