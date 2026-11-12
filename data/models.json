@@ -1,10 +1,10 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-11-11T14:29:54Z",
-  "model_count": 54,
+  "extracted_at": "2026-11-12T15:22:53Z",
+  "model_count": 56,
   "specification_counts": {
-    "image": 50,
+    "image": 52,
     "token": 4
   },
   "models": [
@@ -1221,6 +1221,58 @@
           "cached_image_input": 0,
           "text_output": 0,
           "image_output": 15.2
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "minimax-h3-image",
+      "name": "minimax-h3-image",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 2.678571,
+          "cached_text_input": 0,
+          "image_input": 1.785714,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 4.464286
+        },
+        "effective": {
+          "text_input": 2.1428568,
+          "cached_text_input": 0,
+          "image_input": 1.4285712,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 3.5714288
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "minimax-h3-image-highspeed",
+      "name": "minimax-h3-image-highspeed",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 2.678571,
+          "cached_text_input": 0,
+          "image_input": 3.571429,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 8.928571
+        },
+        "effective": {
+          "text_input": 2.1428568,
+          "cached_text_input": 0,
+          "image_input": 2.8571432,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 7.1428568
         }
       },
       "billing_type": "tiered_token"
