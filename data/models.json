@@ -1,7 +1,7 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-11-16T15:57:52Z",
+  "extracted_at": "2026-11-17T16:09:09Z",
   "model_count": 56,
   "specification_counts": {
     "image": 52,
@@ -1392,8 +1392,8 @@
       "unit": "usd_per_image",
       "prices": {
         "default": {
-          "list": 0.017143,
-          "effective": 0.0137144
+          "list": 0.018,
+          "effective": 0.0144
         }
       }
     },
@@ -1422,20 +1422,20 @@
           "effective": 0.036
         },
         "1K": {
-          "list": 0.0365625,
-          "effective": 0.02925
+          "list": 0.045,
+          "effective": 0.036
         },
         "1K-layer": {
-          "list": 0.01828125,
-          "effective": 0.014625
+          "list": 0.0225,
+          "effective": 0.018
         },
         "2K": {
-          "list": 0.073125,
-          "effective": 0.0585
+          "list": 0.09,
+          "effective": 0.072
         },
         "2K-layer": {
-          "list": 0.0365625,
-          "effective": 0.02925
+          "list": 0.045,
+          "effective": 0.036
         }
       }
     },
@@ -1448,23 +1448,23 @@
       "prices": {
         "default": {
           "list": 0.035,
-          "effective": 0.02275
+          "effective": 0.028
         },
         "1K": {
           "list": 0.02,
-          "effective": 0.013
+          "effective": 0.016
         },
         "1K-layer": {
           "list": 0.02,
-          "effective": 0.013
+          "effective": 0.016
         },
         "2K": {
           "list": 0.035,
-          "effective": 0.02275
+          "effective": 0.028
         },
         "2K-layer": {
           "list": 0.035,
-          "effective": 0.02275
+          "effective": 0.028
         }
       }
     },

@@ -1,6 +1,6 @@
 # Unified model catalog
 
-56 models captured from `https://apimart.ai/en/pricing` on 2026-11-16T15:57:52Z.
+56 models captured from `https://apimart.ai/en/pricing` on 2026-11-17T16:09:09Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -49,10 +49,10 @@
 | `qwen-image-3.0-pro` | qwen-image-3.0-pro | $undefined | image | usd_per_image | $0.0286 |
 | `seedream-4-0` | seedream-4-0 | $undefined | image | usd_per_image | $0.0195 |
 | `seedream-4-5` | seedream-4-5 | $undefined | image | usd_per_image | $0.026 |
-| `seedream-5-0-flash` | seedream-5-0-flash | $undefined | image | usd_per_image | $0.0137 |
+| `seedream-5-0-flash` | seedream-5-0-flash | $undefined | image | usd_per_image | $0.0144 |
 | `seedream-5-0-lite` | seedream-5-0-lite | $undefined | image | usd_per_image | $0.028 |
 | `seedream-5-0-pro` | seedream-5-0-pro | $undefined | image | usd_per_image | $0.036 |
-| `seedream-5-5` | seedream-5-5 | $undefined | image | usd_per_image | $0.0227 |
+| `seedream-5-5` | seedream-5-5 | $undefined | image | usd_per_image | $0.028 |
 | `wan2.7-image` | wan2.7-image | $undefined | image | usd_per_image | $0.0216 |
 | `wan2.7-image-pro` | wan2.7-image-pro | $undefined | image | usd_per_image | $0.0544 |
 | `z-image-turbo` | z-image-turbo | $undefined | image | usd_per_image | $0.01 |
