@@ -1,6 +1,6 @@
 # Unified model catalog
 
-56 models captured from `https://apimart.ai/en/pricing` on 2026-11-17T16:09:09Z.
+59 models captured from `https://apimart.ai/en/pricing` on 2026-11-18T15:46:31Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -39,6 +39,7 @@
 | `grok-imagine-image-quality` | grok-imagine-image-quality | $undefined | image | usd_per_image | $0.04 |
 | `hy-image-v3.5-preview` | hy-image-v3.5-preview | $undefined | image | usd_per_image | $0.0192 |
 | `imagen-4.0-apimart` | imagen-4.0-apimart | $undefined | image | usd_per_image | $0.04 |
+| `kling-v4-image` | kling-v4-image | $undefined | image | usd_per_image | $0.0571 |
 | `midjourney` | Midjourney | $undefined | image | usd_per_call | $0.045 |
 | `minimax-h3-image` | minimax-h3-image | $undefined | image | usd_per_million_tokens | — |
 | `minimax-h3-image-highspeed` | minimax-h3-image-highspeed | $undefined | image | usd_per_million_tokens | — |
@@ -60,5 +61,7 @@
 | `gpt-image-1` | gpt-image-1 | $undefined | token | usd_per_million_tokens | — |
 | `mai-image-2.6` | mai-image-2.6 | $undefined | token | usd_per_million_tokens | — |
 | `mai-image-2.6-flash` | mai-image-2.6-flash | $undefined | token | usd_per_million_tokens | — |
+| `mai-image-2.7` | mai-image-2.7 | $undefined | token | usd_per_million_tokens | — |
+| `mai-image-2.7-flash` | mai-image-2.7-flash | $undefined | token | usd_per_million_tokens | — |
 
 Regenerate with `python tools/catalog.py`. Effective prices include the default group discount; list prices are in `data/models.json`.

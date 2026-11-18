@@ -1,11 +1,11 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-11-17T16:09:09Z",
-  "model_count": 56,
+  "extracted_at": "2026-11-18T15:46:31Z",
+  "model_count": 59,
   "specification_counts": {
-    "image": 52,
-    "token": 4
+    "image": 53,
+    "token": 6
   },
   "models": [
     {
@@ -1174,6 +1174,27 @@
       }
     },
     {
+      "id": "kling-v4-image",
+      "name": "kling-v4-image",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.0571432,
+          "effective": 0.0571432
+        },
+        "2K": {
+          "list": 0.0571432,
+          "effective": 0.0571432
+        },
+        "4K": {
+          "list": 0.0857144,
+          "effective": 0.0857144
+        }
+      }
+    },
+    {
       "id": "mai-image-2.6",
       "name": "mai-image-2.6",
       "alias": "$undefined",
@@ -1221,6 +1242,58 @@
           "cached_image_input": 0,
           "text_output": 0,
           "image_output": 15.2
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "mai-image-2.7",
+      "name": "mai-image-2.7",
+      "alias": "$undefined",
+      "specification": "token",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 0,
+          "image_input": 8,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 34
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 0,
+          "image_input": 6.4,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 27.2
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "mai-image-2.7-flash",
+      "name": "mai-image-2.7-flash",
+      "alias": "$undefined",
+      "specification": "token",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 1.75,
+          "cached_text_input": 0,
+          "image_input": 2.5,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 10
+        },
+        "effective": {
+          "text_input": 1.4,
+          "cached_text_input": 0,
+          "image_input": 2,
+          "cached_image_input": 0,
+          "text_output": 0,
+          "image_output": 8
         }
       },
       "billing_type": "tiered_token"
