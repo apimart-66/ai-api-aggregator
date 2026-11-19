@@ -1,11 +1,10 @@
 {
   "source": "https://apimart.ai/en/pricing",
   "method": "React Server Component payload of the public pricing page (no API key required)",
-  "extracted_at": "2026-11-18T15:46:31Z",
-  "model_count": 59,
+  "extracted_at": "2026-11-19T15:50:57Z",
+  "model_count": 61,
   "specification_counts": {
-    "image": 53,
-    "token": 6
+    "image": 61
   },
   "models": [
     {
@@ -540,7 +539,7 @@
       "id": "flux-3-image",
       "name": "flux-3-image",
       "alias": "$undefined",
-      "specification": "token",
+      "specification": "image",
       "unit": "usd_per_image",
       "prices": {
         "default": {
@@ -748,7 +747,7 @@
       "id": "gpt-image-1",
       "name": "gpt-image-1",
       "alias": "$undefined",
-      "specification": "token",
+      "specification": "image",
       "unit": "usd_per_million_tokens",
       "prices": {
         "list": {
@@ -788,6 +787,32 @@
           "image_input": 8,
           "cached_image_input": 2,
           "image_output": 32
+        }
+      },
+      "billing_type": "tiered_token"
+    },
+    {
+      "id": "gpt-image-1.5",
+      "name": "gpt-image-1.5",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_million_tokens",
+      "prices": {
+        "list": {
+          "text_input": 5,
+          "cached_text_input": 1.25,
+          "image_input": 8,
+          "cached_image_input": 2,
+          "text_output": 10,
+          "image_output": 32
+        },
+        "effective": {
+          "text_input": 4,
+          "cached_text_input": 1,
+          "image_input": 6.4,
+          "cached_image_input": 1.6,
+          "text_output": 8,
+          "image_output": 25.6
         }
       },
       "billing_type": "tiered_token"
@@ -1195,10 +1220,55 @@
       }
     },
     {
+      "id": "kling-v4-long-image",
+      "name": "kling-v4-long-image",
+      "alias": "$undefined",
+      "specification": "image",
+      "unit": "usd_per_image",
+      "prices": {
+        "default": {
+          "list": 0.4285712,
+          "effective": 0.4285712
+        },
+        "1K-LONG": {
+          "list": 0.7142856,
+          "effective": 0.7142856
+        },
+        "1K-MEDIUM": {
+          "list": 0.4285712,
+          "effective": 0.4285712
+        },
+        "1K-SHORT": {
+          "list": 0.2142856,
+          "effective": 0.2142856
+        },
+        "1K-WEBPAGE": {
+          "list": 0.5,
+          "effective": 0.5
+        },
+        "2K-LONG": {
+          "list": 0.7857144,
+          "effective": 0.7857144
+        },
+        "2K-MEDIUM": {
+          "list": 0.5,
+          "effective": 0.5
+        },
+        "2K-SHORT": {
+          "list": 0.2571432,
+          "effective": 0.2571432
+        },
+        "2K-WEBPAGE": {
+          "list": 0.5428568,
+          "effective": 0.5428568
+        }
+      }
+    },
+    {
       "id": "mai-image-2.6",
       "name": "mai-image-2.6",
       "alias": "$undefined",
-      "specification": "token",
+      "specification": "image",
       "unit": "usd_per_million_tokens",
       "prices": {
         "list": {
@@ -1224,7 +1294,7 @@
       "id": "mai-image-2.6-flash",
       "name": "mai-image-2.6-flash",
       "alias": "$undefined",
-      "specification": "token",
+      "specification": "image",
       "unit": "usd_per_million_tokens",
       "prices": {
         "list": {
@@ -1250,7 +1320,7 @@
       "id": "mai-image-2.7",
       "name": "mai-image-2.7",
       "alias": "$undefined",
-      "specification": "token",
+      "specification": "image",
       "unit": "usd_per_million_tokens",
       "prices": {
         "list": {
@@ -1276,7 +1346,7 @@
       "id": "mai-image-2.7-flash",
       "name": "mai-image-2.7-flash",
       "alias": "$undefined",
-      "specification": "token",
+      "specification": "image",
       "unit": "usd_per_million_tokens",
       "prices": {
         "list": {

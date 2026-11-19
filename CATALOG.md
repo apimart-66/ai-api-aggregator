@@ -1,6 +1,6 @@
 # Unified model catalog
 
-59 models captured from `https://apimart.ai/en/pricing` on 2026-11-18T15:46:31Z.
+61 models captured from `https://apimart.ai/en/pricing` on 2026-11-19T15:50:57Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -8,6 +8,7 @@
 | `flux-2-flex` | flux-2-flex | $undefined | image | usd_per_image | — |
 | `flux-2-max` | flux-2-max | $undefined | image | usd_per_image | $0.08 |
 | `flux-2-pro` | flux-2-pro | $undefined | image | usd_per_image | — |
+| `flux-3-image` | flux-3-image | $undefined | image | usd_per_image | $0.0384 |
 | `flux-3-image-klein` | flux-3-image-klein | $undefined | image | usd_per_image | $0.0072 |
 | `flux-kontext-max` | flux-kontext-max | $undefined | image | usd_per_image | $0.064 |
 | `flux-kontext-pro` | flux-kontext-pro | $undefined | image | usd_per_image | $0.032 |
@@ -21,7 +22,9 @@
 | `gemini-3.1-flash-lite-image-ext` | gemini-3.1-flash-lite-image-ext | nano-banana-2-lite-ext | image | usd_per_image | $0.008 |
 | `gemini-nano-banana-2.1` | Nano Banana 2.1 | $undefined | image | usd_per_million_tokens | — |
 | `gemini-nano-banana-2.1-ext` | gemini-nano-banana-2.1-ext | $undefined | image | usd_per_image | $0.02 |
+| `gpt-image-1` | gpt-image-1 | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-1-official` | gpt-image-1-official | $undefined | image | usd_per_million_tokens | — |
+| `gpt-image-1.5` | gpt-image-1.5 | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-1.5-official` | gpt-image-1.5-official | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-2` | gpt-image-2 | gpt-image-2-ext | image | usd_per_image | $0.0085 |
 | `gpt-image-2-official` | gpt-image-2-official | $undefined | image | usd_per_million_tokens | — |
@@ -40,6 +43,11 @@
 | `hy-image-v3.5-preview` | hy-image-v3.5-preview | $undefined | image | usd_per_image | $0.0192 |
 | `imagen-4.0-apimart` | imagen-4.0-apimart | $undefined | image | usd_per_image | $0.04 |
 | `kling-v4-image` | kling-v4-image | $undefined | image | usd_per_image | $0.0571 |
+| `kling-v4-long-image` | kling-v4-long-image | $undefined | image | usd_per_image | $0.4286 |
+| `mai-image-2.6` | mai-image-2.6 | $undefined | image | usd_per_million_tokens | — |
+| `mai-image-2.6-flash` | mai-image-2.6-flash | $undefined | image | usd_per_million_tokens | — |
+| `mai-image-2.7` | mai-image-2.7 | $undefined | image | usd_per_million_tokens | — |
+| `mai-image-2.7-flash` | mai-image-2.7-flash | $undefined | image | usd_per_million_tokens | — |
 | `midjourney` | Midjourney | $undefined | image | usd_per_call | $0.045 |
 | `minimax-h3-image` | minimax-h3-image | $undefined | image | usd_per_million_tokens | — |
 | `minimax-h3-image-highspeed` | minimax-h3-image-highspeed | $undefined | image | usd_per_million_tokens | — |
@@ -57,11 +65,5 @@
 | `wan2.7-image` | wan2.7-image | $undefined | image | usd_per_image | $0.0216 |
 | `wan2.7-image-pro` | wan2.7-image-pro | $undefined | image | usd_per_image | $0.0544 |
 | `z-image-turbo` | z-image-turbo | $undefined | image | usd_per_image | $0.01 |
-| `flux-3-image` | flux-3-image | $undefined | token | usd_per_image | $0.0384 |
-| `gpt-image-1` | gpt-image-1 | $undefined | token | usd_per_million_tokens | — |
-| `mai-image-2.6` | mai-image-2.6 | $undefined | token | usd_per_million_tokens | — |
-| `mai-image-2.6-flash` | mai-image-2.6-flash | $undefined | token | usd_per_million_tokens | — |
-| `mai-image-2.7` | mai-image-2.7 | $undefined | token | usd_per_million_tokens | — |
-| `mai-image-2.7-flash` | mai-image-2.7-flash | $undefined | token | usd_per_million_tokens | — |
 
 Regenerate with `python tools/catalog.py`. Effective prices include the default group discount; list prices are in `data/models.json`.
