@@ -1,6 +1,6 @@
 # Unified model catalog
 
-61 models captured from `https://apimart.ai/en/pricing` on 2026-11-26T17:00:14Z.
+61 models captured from `https://apimart.ai/en/pricing` on 2026-11-27T16:46:04Z.
 
 | Model id | Display name | Alias | Modality | Billing unit | Headline |
 | --- | --- | --- | --- | --- | --- |
@@ -21,7 +21,7 @@
 | `gemini-3.1-flash-lite-image` | Nano-Banana-2-Lite | nano-banana-2-lite | image | usd_per_million_tokens | — |
 | `gemini-3.1-flash-lite-image-ext` | gemini-3.1-flash-lite-image-ext | nano-banana-2-lite-ext | image | usd_per_image | $0.008 |
 | `gemini-nano-banana-2.1` | Nano Banana 2.1 | $undefined | image | usd_per_million_tokens | — |
-| `gemini-nano-banana-2.1-ext` | gemini-nano-banana-2.1-ext | $undefined | image | usd_per_image | $0.02 |
+| `gemini-nano-banana-2.1-ext` | gemini-nano-banana-2.1-ext | $undefined | image | usd_per_image | $0.012 |
 | `gpt-image-1` | gpt-image-1 | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-1-official` | gpt-image-1-official | $undefined | image | usd_per_million_tokens | — |
 | `gpt-image-1.5` | gpt-image-1.5 | $undefined | image | usd_per_million_tokens | — |
